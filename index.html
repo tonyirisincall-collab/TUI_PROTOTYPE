@@ -233,6 +233,65 @@ body.focus .view{padding-top:22px}
  .hm,.tchip.on{display:none}
  #nudge{bottom:70px}
 }
+/* call mode */
+.chead{display:grid;gap:10px;margin:8px 0 14px}
+.chead .nm{display:flex;align-items:center;gap:10px;font-size:12px;font-weight:700;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.chead .nm input{max-width:170px}.top2{align-items:center;gap:12px;flex-wrap:wrap}.top2 h1{margin:0}.cmap{margin:2px 0 10px}.cn .cb{width:30px;height:30px;font-size:13px}.cl{margin-top:18px}.cn small{display:none}.cn.cur small{display:block}.cstep .ch h2{display:none}.cstep .ch{margin-bottom:6px}
+.cw{display:grid;gap:6px}
+.cmap{display:flex;align-items:flex-start;margin:6px 0 16px;overflow-x:auto;padding:6px 0 8px}
+.cn{flex:1 1 0;min-width:84px;display:grid;justify-items:center;gap:3px;border:0;background:none;padding:4px 2px;color:var(--mut);transition:transform .2s var(--ease)}
+.cn:hover{transform:translateY(-2px)}
+.cn .cb{width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;background:var(--card);border:2px solid var(--line);transition:all .3s var(--ease)}
+.cn b{font-size:13px;color:var(--ink)}.cn small{font-size:11px;text-align:center;line-height:1.2}
+.cn.cur .cb{background:var(--ac);border-color:var(--ac);color:#fff;box-shadow:0 0 0 5px var(--acs);transform:scale(1.1)}
+.cn.done .cb{background:var(--oks);border-color:var(--ok);color:var(--ok)}
+.cn.skip .cb{background:var(--warns);border-color:var(--warn);color:var(--warn)}
+.cn.done small{color:var(--ok)}.cn.skip small{color:var(--warn)}
+.cl{flex:0 0 14px;height:2px;background:var(--line);margin-top:22px}
+.cgrid{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:16px;align-items:start}
+.cside{display:grid;gap:12px;position:sticky;top:0}
+.cside h3{margin:0 0 8px;font-size:14px}
+.cside .fld{margin-bottom:10px}
+.chip.on{background:var(--ac);border-color:var(--ac);color:#fff}
+.cq{display:grid;gap:2px;max-height:260px;overflow:auto}
+.cq .qci{display:flex;gap:8px;font-size:13px;padding:4px 2px}
+.cq .qci.done span{color:var(--mut);text-decoration:line-through}
+.cstep .ch h2{margin:2px 0 2px}
+.cstep .grid2{grid-template-columns:1fr}
+.btn.more{margin-top:8px}
+.cbar{position:fixed;left:84px;right:0;bottom:0;display:flex;gap:10px;padding:10px 16px;background:var(--card);border-top:1px solid var(--line);z-index:15}
+.cbar .btn{flex:1;justify-content:center;height:46px}
+.btn.pr{background:var(--ac);color:#fff;border-color:var(--ac)}
+.cbar .btn.pr{flex:2}
+.cbar .btn:disabled{opacity:.4}
+.cfin .checks label{display:flex;gap:8px;padding:4px 0}
+@media(max-width:900px){.cgrid{grid-template-columns:1fr}.cside{position:static}}
+@media(max-width:760px){.cbar{left:0;bottom:62px}.cn{min-width:40px}.cl{flex:0 0 4px}.chead .nm span{display:none}.chead .nm input{max-width:130px}.top2 .btn{padding:7px 10px;font-size:13px}.cstep .ch .tip{font-size:12px}.cn small{display:none}}
+.say .wh{display:block;font-size:12.5px;font-weight:600;color:var(--ink);opacity:.8;margin-bottom:3px}.say .tip.bn{color:var(--ok)}.say .tip.bn::before{content:"Why: ";font-weight:700}
+.qcard{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--ac);border-radius:var(--r);padding:12px 14px;margin-bottom:14px;box-shadow:var(--sh);transition:border-color .3s,background .3s}
+.qcard.done{border-left-color:var(--ok)}
+.qh{display:flex;gap:10px;align-items:flex-start;cursor:pointer}.qh input{margin-top:4px;width:18px;height:18px;flex:none}
+.qt b{display:block;font-size:15px}.qt small{display:block;color:var(--mut);font-size:12.5px;margin-top:1px}
+.qcard.done .qt b{color:var(--ok)}
+.qcard .grid2{grid-template-columns:1fr;margin-top:10px}.qcard .card.mom{box-shadow:none}
+.qleft{color:var(--warn)}.qleft.ok{color:var(--ok)}
+.also{margin:6px 0 14px}
+
+.proc{padding:0;overflow:hidden}.proc .ph{display:flex;align-items:center;gap:10px;width:100%;border:0;background:none;padding:12px 14px;text-align:left;color:var(--ink)}
+.proc .ph b{flex:1;font-size:15px}.proc .pc{font-size:12px;color:var(--mut);font-variant-numeric:tabular-nums}.proc .ch{transition:transform .25s var(--ease)}.proc.open .ch{transform:rotate(90deg)}
+.proc .pb{display:grid;grid-template-rows:0fr;transition:grid-template-rows .32s var(--ease)}.proc.open .pb{grid-template-rows:1fr}.proc .pb>div{overflow:hidden;padding:0 14px}.proc.open .pb>div{padding-bottom:14px}
+.pgroup{margin:10px 0}.pgroup .say{margin-top:6px}
+.psteps{margin:6px 0 0;padding-left:0;list-style:none;counter-reset:s}.psteps li{counter-increment:s;padding:6px 0;border-bottom:1px dashed var(--line)}
+.psteps li label{display:flex;gap:10px;align-items:flex-start;font-size:14px}.psteps li::before{display:none}.psteps li.done span{color:var(--mut);text-decoration:line-through}
+.psteps input{margin-top:3px;width:17px;height:17px;flex:none}
+.pnote{background:var(--warns);color:var(--warn);border-radius:10px;padding:9px 12px;font-size:13px;margin:10px 0 0}
+.vlist{list-style:none;margin:8px 0;padding:0;display:grid;gap:8px}.vlist li{border:1px solid var(--line);border-radius:12px;padding:8px 10px}.vlist li.done{border-color:var(--ok);background:var(--oks)}
+.vlist label{display:flex;gap:10px;align-items:center;margin-bottom:6px}.vlist input{width:18px;height:18px}.vt{margin:8px 0 0}
+.sysd summary{display:flex;align-items:center;justify-content:space-between;cursor:pointer;list-style:none}.sysd summary::-webkit-details-marker{display:none}.sysd ul{margin:8px 0 0;padding-left:18px}.sysd li{margin:5px 0;font-size:14px}
+.sysd[open] .ch{transform:rotate(90deg)}.sysd .ch{transition:transform .25s}
+ul.plain{margin:6px 0 10px;padding-left:18px}.memoex{text-align:left;display:grid;gap:4px;cursor:pointer}.memoex:hover{border-color:var(--ac)}
+pre.memo#cmemo{margin-top:8px;max-height:200px;overflow:auto}
+#atbody .grid2{grid-template-columns:1fr;max-width:820px}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 /* ---- v3 additions ---- */
 .pt{outline:3px solid var(--ac)!important;outline-offset:3px;position:relative;animation:ptpulse 1.1s ease-in-out 4}
@@ -356,6 +415,8 @@ body.focus .view{padding-top:22px}
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
 <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></symbol>
 <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></symbol>
+<symbol id="i-head" viewBox="0 0 24 24"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><path d="M21 15a2 2 0 0 1-2 2h-1v-5h1a2 2 0 0 1 2 2zM3 15a2 2 0 0 0 2 2h1v-5H5a2 2 0 0 0-2 2z"/><path d="M18 17v1a3 3 0 0 1-3 3h-2"/></symbol>
+<symbol id="i-sys" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></symbol>
 <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8z"/></symbol>
 <symbol id="i-plane" viewBox="0 0 24 24"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></symbol>
 <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
@@ -397,6 +458,8 @@ body.focus .view{padding-top:22px}
     <div id="stallwrap"><div><div class="stall"><span class="sl">Need a moment?</span><span id="stallTxt"></span><button id="stallSay" title="Listen"><svg class="ic"><use href="#i-spk"/></svg></button><button id="stallCopy" title="Copy"><svg class="ic"><use href="#i-copy"/></svg>Copy</button><button id="stallNext" title="Another phrase"><svg class="ic"><use href="#i-refresh"/></svg>Another</button><button id="stallMore">More</button><button id="stallOff" title="Turn auto helpers off">Stop</button></div><div class="stallbar"><i id="stallProg"></i></div></div></div>
     <div id="dock"><div><div class="dk" id="dk"></div></div></div>
     <div class="stage">
+      <section class="view" id="v-call"><div class="wrap" id="w-call"></div></section>
+      <section class="view" id="v-atcom"><div class="wrap" id="w-atcom"></div></section>
       <section class="view" id="v-home"><div class="wrap" id="w-home"></div></section>
       <section class="view" id="v-cust"><div class="wrap" id="w-cust"></div></section>
       <section class="view" id="v-type"><div class="wrap" id="w-type"></div></section>
@@ -542,8 +605,8 @@ const NF=[
  {k:'pause',l:'Recording paused for payment?',o:['Yes']},
  {k:'exp',l:'Expectations managed (e.g. email within 24 hours)?',o:['Yes']}];
 const SALES=['Seats','Bags','Meal','Room / board upgrade','Transfer','Other extra','Offered - declined'];
-const REASONS=['Payment / balance','Balance extension','Amendment','Cancellation','Complaint / feedback','Seats','Baggage','Hotel / room request','Special assistance','Documents / e-tickets','Name correction','Transfer','Holiday change (HC)','Flight time change','Promo / voucher','Refund query','General information','Other'];
-const ACTIONS=['Amended booking','Added seats','Added bags','Added meal','Took payment','Resent documents','Explained fees','Cancelled booking','Noted request with hotel','Raised C4C case','Escalated to TL','Sent confirmation email','Transferred call','Advised GOV.UK / insurer'];
+const REASONS=['Payment / balance','Balance extension','Amendment','Cancellation','Complaint / feedback','Seats','Baggage','Hotel / room request','Special assistance','Documents / e-tickets','Name correction','Transfer','Holiday change (HC)','Date or duration change','Passenger change','Flight time change','Promo / voucher','Refund query','General information','Other'];
+const ACTIONS=['Amended booking','Added seats','Added bags','Added meal','Took payment','Resent documents','Explained fees','Cancelled booking','Noted request with hotel','Raised C4C case','Escalated to TL','Sent confirmation email','Transferred call','Advised GOV.UK / insurer','Changed date','Changed name','Added passenger','Removed passenger','Changed room or board','Applied promo code','Sent pay by link','Added non-lead authorisation'];
 const CODES=['PRII','PRID','BPD','OLDR','HCMH','TRD','CANS','AFEE','CCEM','Other'];
 const MEMOS=['BO / BEM','BE / BEN','NLA / NLDA','HC / HCN','QSM','Other'];
 const blank=()=>{const o={sales:[],reasonSel:'NA',reasonDet:'',action:'',c4c:'',salesDet:'',code:'NA',amt:'',creason:'',memo:'BO / BEM',hideNA:false};NF.forEach(f=>o[f.k]='NA');return o};
@@ -551,7 +614,6 @@ const blank=()=>{const o={sales:[],reasonSel:'NA',reasonDet:'',action:'',c4c:'',
 function memoText(){
  const L=[],add=(l,v)=>{const em=!v||v==='NA';if(em&&N.hideNA)return;L.push((/\?$/.test(l)?l+' ':l+': ')+(em?'NA':v))};
  const m=k=>{const f=NF.find(x=>x.k===k),v=N[k];if(v==='NA')return'NA';const o=f.o.find(x=>(Array.isArray(x)?x[0]:x)===v);return Array.isArray(o)?o[1]:v};
- if(N.memo&&N.memo!=='Other')L.push('Memo: '+N.memo);
  add('Who called?',m('who'));add('GDPR passed?',m('gdpr'));add('Booking type?',m('btype'));
  let r=N.reasonSel!=='NA'?N.reasonSel:'';if(N.reasonDet.trim())r+=(r?' - ':'')+N.reasonDet.trim();add('Reason for call?',r);
  let a=N.action.trim();if(N.c4c.trim())a+=(a?' ':'')+'(C4C case: '+N.c4c.trim()+')';add('Action taken (including any c4c case references)',a);
@@ -559,7 +621,9 @@ function memoText(){
  let s=N.sales.join(', ');if(N.salesDet.trim())s+=(s?' - ':'')+N.salesDet.trim();add('Sales?',s);
  add('Errata?',m('errata'));add('Insurance?',m('ins'));add('Full read back given (Y or N)?',m('rb'));
  add('Recording paused for payment?',m('pause'));add('Expectations managed?',m('exp'));
- add('Code',N.code);add('Amount',N.amt.trim());add('Reason',N.creason.trim());
+ if(N.code&&N.code!=='NA')add('Code',N.code);
+ const hasCar=(N.memo&&N.memo!=='Other')||N.amt.trim()||N.creason.trim();
+ if(hasCar)L.push('Booking memo (CAR): Code '+(N.memo||'NA')+' | Amount '+(N.amt.trim()||'NA')+' | Reason '+(N.creason.trim()||'NA'));
  return L.join('\n')}
 
 
@@ -570,19 +634,19 @@ const GL=g=>(GROUPS.find(x=>x[0]===g)||[])[1]||g;
 /* [id, group, title, customer context, [[method, line, best-for types]...], related ids] */
 const MR=[
 /* ---------- OPEN ---------- */
-['o1','open','Greeting the customer','The line connects.',[
- ['Standard',"Good morning, thank you for calling TUI. You're through to [Name]. Who am I speaking to today?"],
- ['Warm and relaxed',"Hi there, thanks for calling TUI, this is [Name]. What can I do for you today?",'easy,chatty'],
- ['After a long wait',"Thank you for calling TUI, and thank you for your patience. I'm [Name], and I'll take good care of you. What can I help with?",'angry,rush'],
- ['Calm and slow',"Hello, you're through to [Name] at TUI. Take your time, there's no rush at all. How can I help?",'confused,anxious'],
- ['Quick and efficient',"Thank you for calling TUI, [Name] speaking. What do you need today?",'rush'],
- ['Evening or weekend',"Good evening, thank you for calling TUI. I'm [Name], and I'm happy to help. What's happened?"]],['o2','o4']],
+['o1','open','Greeting the customer','The line connects. The customer already chose a menu option, so greet, then confirm why they called.',[
+ ['Standard',"Thank you for calling TUI Pre-Travel, this is [Name]. How can I help you today?"],
+ ['Good morning',"Good morning, thank you for calling TUI Pre-Travel, you're through to [Name]. How can I help?"],
+ ['Warm and relaxed',"Hi there, thanks for calling TUI Pre-Travel, this is [Name]. How can I help you today?",'easy,chatty'],
+ ['After a long wait',"Thank you for calling TUI Pre-Travel, and thank you for your patience. This is [Name], and I'll take it from here. How can I help?",'angry,rush'],
+ ['Calm and slow',"Hello, thank you for calling TUI Pre-Travel, this is [Name]. Take your time, there's no rush. How can I help?",'confused,anxious'],
+ ['Quick and efficient',"Thank you for calling TUI Pre-Travel, [Name] speaking. How can I help?",'rush']],['o2','o4']],
 ['o2','open','Customer starts with frustration','Customer says: I have been on hold for ages!',[
- ['Apologise and own it',"I'm sorry about the wait, that's not the experience we want you to have. I'm [Name], and I'm going to help you from here. What's happened?",'angry'],
- ['Thank them',"Thank you for holding, I really appreciate your patience. Let's get this sorted for you. May I take your name?",'rush,easy'],
+ ['Apologise and own it',"I'm sorry about the wait, that's not the experience we want you to have. This is [Name], and I'll take it from here. I can see you're calling about [reason], so let's get straight to it.",'angry'],
+ ['Thank them',"Thank you for holding, I really appreciate your patience. Let's get [reason] sorted for you.",'rush,easy'],
  ['Acknowledge the feeling',"I can hear how frustrating that's been. I'm here now, and I'll do my best to put it right.",'angry,anxious'],
- ['Move straight to action',"I'm sorry for the wait. Let's not waste any more of your time. Tell me what you need and I'll start right away.",'rush'],
- ['Keep it light',"Thanks for hanging on, I know it's not fun waiting. You've got me now, so what can I help with?",'easy,chatty']],['a1','o1']],
+ ['Move straight to action',"I'm sorry for the wait. Let's not waste any more of your time. A quick security check, and then we'll sort [reason].",'rush'],
+ ['Keep it light',"Thanks for hanging on, I know it's not fun waiting. You've got me now, so let's get this sorted.",'easy,chatty']],['a1','o1']],
 ['o3','open','Returning or chasing caller','Customer says: I called yesterday and nothing happened.',[
  ['Read the history',"I'm sorry you've had to chase this. Let me read the notes from your last call so you don't have to repeat everything.",'angry,demanding'],
  ['Own the follow-up',"Thank you for calling back. I'll take ownership of this today and make sure it moves forward.",'angry'],
@@ -590,10 +654,10 @@ const MR=[
  ['Give a clear plan',"I'm sorry about that. Here's what I'll do now: [action], and I'll confirm the next step before we finish.",'anxious,indecisive'],
  ['Show you care',"I'm sorry, that's not good enough, and I understand why you're calling back. Let's fix this together.",'angry,anxious']],['a3','o2']],
 ['o4','open','Quiet or unsure customer','Customer hesitates after the greeting.',[
- ['Take your time',"Take your time, there's no rush at all. Whenever you're ready, tell me what's on your mind and we'll work through it together.",'confused,anxious'],
- ['Offer a starting point',"Would it help if I started with your booking reference, and we'll go from there?",'confused'],
+ ['Take your time',"Take your time, there's no rush at all. Whenever you're ready, we'll go through [reason] together.",'confused,anxious'],
+ ['Offer a starting point',"Shall I start with a quick security check, and we'll go from there?",'confused'],
  ['Normalise the call',"Lots of customers call about this, so you're in the right place and I'll make it easy.",'anxious'],
- ['Ask a small question',"Is it about a booking you already have, or one you're thinking about making?",'confused,indecisive'],
+ ['Ask a small question',"Take a moment, and let me know when you have your booking reference to hand.",'confused,indecisive'],
  ['Soften your tone',"I'm going to go slowly, so please stop me whenever you'd like me to repeat anything.",'confused']],['v1','o1']],
 ['o5','open','Wrong team or transferred call','The customer reached the wrong department, or was transferred to you.',[
  ['Warm handover',"No problem at all, I'll make sure you reach the right team. So you don't have to repeat yourself, may I ask briefly what it's about?"],
@@ -1011,7 +1075,38 @@ const MR=[
  ['Offer to chase',"If it hasn't arrived by then, call us and quote your reference, and we'll chase it.",'anxious,demanding'],
  ['Apologise for the wait',"I'm sorry for the wait, I know that's frustrating.",'angry']],['p3','a3']]
 ];
-const MOM=MR.map(a=>({id:a[0],g:a[1],t:a[2],c:a[3],w:a[4].map(x=>({m:x[0],t:x[1],f:(x[2]||'').split(',').filter(Boolean)})),rel:a[5]||[]}));
+
+const INTENTS=[
+{id:'pay',n:'Payments & balance',say:'your payment',reason:'Payment / balance',res:['p1','p2','p4','r1'],
+ o:[['Acknowledge',"I can see you've selected payments today, so I'll help you with that. First, a quick security check."],['Confirm gently',"Just to confirm, you're calling about a payment on your booking, is that right?"],['Reassure',"No problem at all, payments are quick to sort. Let me verify you first and we'll get straight to it."],['Friendly',"Lovely, let's get that payment sorted for you. May I take your booking reference to start?"],['Set the pace',"I can help with your payment today. It'll take just a few minutes, starting with a quick security check."]],
+ d:[['Balance or deposit',"Is this for the balance, or the deposit?"],['Full or part',"Would you like to pay the full amount today, or part of it?"],['Which card',"Would you like to use the same card as before, or a different one?"],['Due date',"Do you have the payment due date to hand, or shall I check it for you?"],['Anything already paid',"Has any payment already been taken that I should know about?"]]},
+{id:'amend',n:'Change a booking',say:'a change to your booking',reason:'Amendment',res:['r1','r3','f8','d4'],
+ o:[['Acknowledge',"I can see you'd like to make a change to your booking, and I'll be glad to help. First, a quick security check."],['Confirm gently',"Just to confirm, you're calling to change something on your booking, is that right?"],['Reassure',"No problem, changes are often simple. Let me verify you first, and then we'll look at what's possible."],['Friendly',"Lovely, let's see what we can do. May I take your booking reference to start?"],['Set expectations',"I'll check what can be changed and any costs, and I'll tell you before we do anything."]],
+ d:[['What to change',"What would you like to change: the dates, a name, the flights or something else?"],['Why',"Is there a particular reason for the change? It helps me find the best option."],['Flexibility',"How flexible are you on the new dates?"],['Who is affected',"Does this change affect everyone on the booking, or just some of you?"],['Costs first',"I'll check the cost of the change first, so you can decide. Is that okay?"]]},
+{id:'cancel',n:'Cancel a booking',say:'a cancellation',reason:'Cancellation',res:['n2','n3','a7','b4'],
+ o:[['Acknowledge',"I can see you're calling about cancelling a booking. I'm sorry to hear that, and I'll help you with it. First, a quick security check."],['Confirm gently',"Just to confirm, you're calling about cancelling your booking, is that right?"],['Empathise',"I understand, and I'm sorry things haven't worked out. Let me verify you first and then we'll go through your options."],['Neutral',"Of course. Let me verify you first, then I'll explain exactly what cancelling involves."],['Set expectations',"I'll explain the cost before we do anything, so there are no surprises."]],
+ d:[['Reason',"May I ask what's prompted the cancellation? There may be options that could work better."],['Dates',"Could I confirm the departure date and how much has been paid so far?"],['Move instead',"Would moving the dates be better for you than cancelling?"],['Who is travelling',"Is the whole party cancelling, or just some of you?"],['Insurance',"Do you have travel insurance that may cover this? I can't advise on cover, but it's worth checking."]]},
+{id:'docs',n:'Documents & e-tickets',say:'your documents',reason:'Documents / e-tickets',res:['p3','f8'],
+ o:[['Acknowledge',"I can see you're calling about your travel documents, and I'll help you with that. First, a quick security check."],['Confirm gently',"Just to confirm, this is about your travel documents or e-tickets, is that right?"],['Reassure',"No problem, we can sort that quickly. Let me verify you first."],['Friendly',"Lovely, let's get your documents to you. May I take your booking reference?"],['Set expectations',"I'll check where they were sent, and resend them while you're on the line if I can."]],
+ d:[['Not received',"Have you received anything yet, or nothing at all?"],['Email address',"Could you confirm the email address you used for the booking?"],['Junk folder',"Have you had a chance to check your junk folder?"],['What is needed',"Which documents do you need: the e-tickets, the itinerary or something else?"],['Travel date',"When are you travelling? That tells me when your documents are due."]]},
+{id:'extras',n:'Add extras',say:'adding extras to your booking',reason:'Seats',res:['u1','u2','u3','u4'],
+ o:[['Acknowledge',"I can see you'd like to add something to your booking, and I'll be happy to help. First, a quick security check."],['Confirm gently',"Just to confirm, you're calling to add extras such as seats, bags or meals, is that right?"],['Friendly',"Lovely, let's make your trip even better. May I take your booking reference to start?"],['Reassure',"No problem, adding extras is quick. Let me verify you first."],['Set expectations',"I'll show you the options and prices before I add anything."]],
+ d:[['Which extras',"Which extras were you thinking of: seats, bags, meals or something else?"],['Who is travelling',"Who's travelling with you? That helps me suggest the right seats."],['Length of trip',"How long are you away? That helps me suggest the right baggage."],['Budget',"Do you have a budget in mind for the extras?"],['Both flights',"Would you like to add them for both flights, or just one way?"]]},
+{id:'hotel',n:'Hotel & room requests',say:'a hotel request',reason:'Hotel / room request',res:['h1','h2','h3','h4','h5','h6'],
+ o:[['Acknowledge',"I can see you're calling about your hotel, and I'll help with that. First, a quick security check."],['Confirm gently',"Just to confirm, this is about a request for your hotel or room, is that right?"],['Reassure',"No problem, I'll note everything carefully. Let me verify you first."],['Friendly',"Lovely, let's get your room right. May I take your booking reference?"],['Set expectations',"I'll pass your request to the hotel, and I'll tell you honestly what's guaranteed and what isn't."]],
+ d:[['Which request',"What would you like to request: a room type, a cot, an early check-in or something else?"],['Who is staying',"Who'll be staying in the room? If there are children, may I take their ages?"],['Special needs',"Are there any dietary or mobility needs I should note?"],['Occasion',"Is it a special occasion we should mention to the hotel?"],['Arrival',"What time do you expect to arrive at the hotel?"]]},
+{id:'assist',n:'Special assistance',say:'special assistance',reason:'Special assistance',res:['f7','h5','a8'],
+ o:[['Acknowledge',"I can see you're calling about special assistance, and I'll take good care of this. First, a quick security check."],['Go at their pace',"Thank you for calling. I'll go at your pace and note everything carefully. First, a quick security check."],['Confirm gently',"Just to confirm, this is about assistance for someone travelling, is that right?"],['Reassure',"Of course, we'll make sure it's all arranged. Let me verify you first."],['Set expectations',"I'll take the details and confirm the request in writing."]],
+ d:[['Who needs help',"Who will need the assistance?"],['What kind',"What kind of help would be useful: at the airport, on board or at the hotel?"],['Equipment',"Do they use a wheelchair or any equipment I should note?"],['Walking distance',"How far can they comfortably walk?"],['Contact',"Is there a number the airport can reach you on, if needed?"]]},
+{id:'problem',n:'Delay or disruption',say:'a delay or disruption',reason:'Flight time change',res:['f1','f2','f3','f4','a1'],
+ o:[['Acknowledge',"I can see you're calling about a delay or a change to your flight, and I'm sorry for the disruption. First, a quick security check."],['Empathise',"I know this can be stressful, and I'll do everything I can to help. First, a quick security check."],['Confirm gently',"Just to confirm, this is about a change to your flight, is that right?"],['Reassure',"Don't worry, let's look at your options together. Let me verify you first."],['Set expectations',"I'll check the latest information and explain what you can do."]],
+ d:[['New times',"Have you received any new flight times from the airline?"],['Impact',"How does this affect your plans?"],['Flexibility',"How flexible are you on timing if we need to look at options?"],['Who is affected',"Is everyone on the booking affected?"],['Priority',"What matters most to you: keeping the dates, getting there on time or a refund?"]]},
+{id:'other',n:'Something else',say:'your booking',reason:'General information',res:['r2','n4'],
+ o:[['Acknowledge',"Thank you for choosing Pre-Travel. I'll help with whatever you need. First, a quick security check."],['Set the pace',"I'll take a quick look at your booking after the security check, and then we'll go from there."],['Friendly',"Lovely, let's see what we can do. May I take your booking reference to start?"],['Reassure',"No problem at all, we'll go through it together. Let me verify you first."],['Keep it simple',"I'll help you with your booking today. First, a quick security check."]],
+ d:[['Open',"Could you tell me a little more about what you need?"],['Narrow',"Is it about a change, a payment or a question?"],['Goal',"What would you like to end up with after this call?"],['Recap',"Just so I've got this right: [recap]. Is that correct?"],['Deadline',"Is there a deadline I should know about, such as your travel date?"]]}
+];
+const INT=id=>INTENTS.find(i=>i.id===id);
+const MOM=MR.map(a=>({id:a[0],g:a[1],t:a[2],c:a[3],w:a[4].map(x=>({m:x[0],t:x[1],f:(x[2]||'').split(',').filter(Boolean)})),rel:a[5]||[]})).concat(INTENTS.flatMap(it=>[{id:'i'+it.id,g:'open',intent:it.id,t:'Why they called: '+it.n,c:'They already chose this menu option, so confirm it. Never guess.',w:it.o.map(x=>({m:x[0],t:x[1],f:[]})),rel:['o1']},{id:'q'+it.id,g:'discover',intent:it.id,t:'Questions: '+it.n,c:'Questions that fit this reason for calling.',w:it.d.map(x=>({m:x[0],t:x[1],f:[]})),rel:['d1','d2']}]));
 const MID=id=>MOM.find(m=>m.id===id);
 const STALL=MOM.filter(m=>m.g==='stall').map(m=>m.w[0].t).concat(["Thank you for your patience, I'm just checking that now.","Let me have a look at that for you, it won't take long.","I want to give you the right information, so I'm just double-checking.","Sorry for the wait, I'm nearly there.","While that loads, are you looking forward to the trip?","That's a good question, let me find the exact answer for you.","I'm making sure everything is correct for you.","One moment please, I'm updating your booking now.","I really appreciate your patience, nearly done."]);
 const QC=[['Warm welcome with the correct tone',['sit','open','o1']],['Listened without interrupting and showed empathy',['sit','angry','a1']],['Showed genuine excitement and made a connection',['rapport']],['Closing tailored to the call',['sit','close','c1']],['Offered a relevant extra and closed the sale',['sit','offer','u1']],['Mentioned the TUI app with a personal benefit',['sit','offer','u5']],['Tried to save the sale and explained any fees',['sit','no','n3']],['GDPR followed: only the right person',['sit','verify','v2']],['Paused the recording for payment details',['sit','pay','p2']],['Full booking notes left after the call',['notes']],['Used open and closed questions, solved it first time',['sit','discover','d1']],['Managed expectations (e.g. email within 24 hours)',['sit','close','c2']]];
@@ -1047,14 +1142,44 @@ const UKTIPS=['Apologise early. One "sorry" is expected and not a weakness.','St
 const UKG=[['quid','pounds (£)'],['fortnight','two weeks'],['half term','school break: peak prices, short notice'],['bank holiday','public holiday Monday'],['all-in','all inclusive'],['first-timers','not been abroad with us before']];
 
 /* ================= STATE ================= */
-let S=Object.assign({view:'home',type:'',tstage:'',stage:'',dest:'',origin:'lhr',sg:'open',country:0,dockCol:false,auto:true,focus:false,recent:[],qc:[],mm:'',favs:[]},store.get('tui-state2',{}));
+let S=Object.assign({view:'call',type:'',tstage:'',stage:'',dest:'',origin:'lhr',sg:'open',country:0,dockCol:false,auto:true,focus:false,recent:[],qc:[],mm:'',favs:[],intent:'',agent:'',cs:{done:{},skip:{}},cstep:0,cfin:false,scn:-1,rub:[],dir:'in',vwho:'cust',vcol:'green',vnl:false,vd:{},ps:{},pg:'Change',pcur:''},store.get('tui-state2',{}));
 if(!Array.isArray(S.qc)||S.qc.length!==QC.length)S.qc=QC.map(()=>false);
 let N=Object.assign(blank(),store.get('tui-notes',{}));
 let REM=store.get('tui-rem',[]);
 const saveS=()=>store.set('tui-state2',S),saveN=()=>store.set('tui-notes',N),saveR=()=>store.set('tui-rem',REM);
-const fill=t=>S.dest&&P(S.dest)?t.replace(/\[destination\]/gi,P(S.dest).n):t;
+/* ===== Benefits: why each line works (shown under every line) ===== */
+const WHYG={open:'Sets a warm tone and shows you know why they called.',verify:'Protects the booking and keeps you GDPR-safe.',discover:'Finds the real need, so you solve it first time.',resolve:'Gives a clear, honest answer so they trust you.',stall:'Fills the silence kindly, so they never feel ignored.',offer:'Adds value that fits what they told you.',close:'Leaves them clear on what happens next.',obj:'Keeps the booking without pressure.',angry:'Calms them so you can fix the problem.',no:'Says no politely and honestly, so trust stays.',hotel:'Takes the request accurately, with no false promises.',flight:'Gives accurate help at a stressful moment.',pay:'Handles money calmly and correctly.',c1:'Ends on a clean, friendly note.',rapport:'Shows real interest and builds a connection.'};
+const BEN={
+'Standard':'Clear and professional. Safe for any caller.','Good morning':'A familiar British opening that sounds welcoming.','Warm and relaxed':'Puts friendly callers at ease.','After a long wait':'Owns the wait before they mention it.','Calm and slow':'Lowers the pressure for nervous callers.','Quick and efficient':'Respects the time of callers in a hurry.',
+'Acknowledge':'They already chose this on the menu. Saying it back means they never repeat themselves.','Confirm gently':'Checks their reason without guessing.','Reassure':'Lowers worry before the security check.','Empathise':'Shows you understand before you ask for anything.','Friendly':'Builds warmth and rapport from the start.','Set expectations':'Tells them what will happen, which covers the expectations check.','Set the pace':'Gives them a clear, short path.','Neutral':'Calm and factual. Good for a cancellation.','Go at their pace':'Makes a vulnerable caller feel safe and unhurried.','Keep it simple':'Short and clear for any caller.',
+'Apologise and own it':'Shows ownership. Customers calm down when someone takes charge.','Thank them':'Appreciation lowers the temperature.','Acknowledge the feeling':'Naming the feeling makes them feel heard.','Move straight to action':'Proves you are fixing it, not just talking.','Keep it light':'Stops small frustration growing.',
+'Explain why':'People cooperate when they know the reason (GDPR).','Friendly ask':'Makes the checks feel like service, not suspicion.','Step by step':'One question at a time is easy to follow.','Thank as you go':'Keeps the customer relaxed during the checks.','Keep it quick':'Respects a rushed customer.',
+'Offer authorisation':'Gives a clear route to help, without breaking GDPR.','Ask them to join':'The fastest legal way to help.','Show appreciation':'Keeps the caller friendly while you say no for now.','Explain simply':'A short reason is easier to accept.','Offer what you can':'They leave with something useful.',
+'Firm and kind':'Holds the rule without sounding cold.','Offer a way forward':'A next step stops an argument.',
+'Open and warm':'An open question gets the full story (open and closed questions check).','Invite the story':'Lets them talk, so you can listen and show empathy.','Focus on the goal':'Aims the whole call at the result they want.','Narrow it down':'A closed question quickly finds the right topic.','Ask about the trip':'Gets facts and builds rapport together.',
+'Recap in your words':'Proves you listened and avoids mistakes.','Check you missed nothing':'Catches missing details before you act.','Name the worry':'Shows empathy by naming what matters most.','Break it into steps':'Makes a long problem feel manageable.','Repeat key details':'Prevents wrong names and dates.',
+'First time?':'An easy question that shows excitement and connection.','Plans':'Invites them to share good news, so you can match their excitement.','Who is travelling':'Gives you facts for seats and room offers.','Occasion':'A special occasion opens an upgrade offer.','Look forward':'Lets you show genuine excitement.',
+'Link to the family':'Tied to what they told you, so it feels like care, not a sale.','Link to flight length':'A real reason: comfort on a long flight.','Extra legroom':'Solves a real problem for tall passengers.','Keep it light':'Low pressure. Easy to say yes.','Soft close':'Gives a choice and keeps control with them.',
+'Compare with the airport':'Saving money is a real benefit, not just a sales line.','Souvenirs':'Links to what they will do on the trip.','Per person price':'A clear price removes doubt.','Family trip':'Linked to the group size.','Add later':'No pressure. They feel in control.',
+'Guarantee the choice':'Benefit: they get the meal they want.','Dietary needs':'Care first. The sale follows.','Children':'Parents want children settled.','Long flight':'Comfort on a long journey.',
+'Half board per day':'A daily price is easy to compare.','Sea view':'Paints a picture of the benefit.','Special occasion':'Shows you care about the moment.','Transfer':'Removes a worry: how to get to the hotel.','Extra night':'More time away for a small cost.',
+'Check-in and boarding pass':'App benefit: check in from the phone, so no queue.','For worried customers':'App benefit: everything in one place, so less worry.','For families':'App benefit: the whole family sees the same details.','For busy customers':'App benefit: saves time at the airport.','Offer to help':'Making it easy raises the chance they download it.',
+'Ask':'A plain question. You stay compliant and never advise.','Gentle reminder':'Mentions it without pressure.','If they have it':'Respects their choice.','If they do not have it':'Informs without selling.','If they ask what is covered':'Honest: point them to the insurer.',
+'Accept gracefully':'A calm no keeps the relationship.','Move on':'No pressure. They stay friendly.','Leave the door open':'They can come back later.','Offer one smaller option':'A smaller yes is better than no.',
+'Recap actions':'Clear next steps. Covers the expectations check.','Set expectations':'No surprise, so no call back.','Repeat promises':'Builds trust by confirming what you will do.','Written summary':'They have proof in writing.','Confirm they are happy':'Last check that the issue is solved.',
+'Warm':'A personal goodbye leaves a good last impression.','Quick':'Right for callers in a hurry.','Check understanding':'Catches confusion before they hang up.','Final thanks':'A friendly finish, with TUI named.',
+'Ask for the dates':'You need the facts before quoting a cost.','Try to save the booking':'One honest attempt to keep the booking (save the sale check).','Refund timing':'A clear timeline avoids a second call.','Admin fee warning':'Explaining fees early avoids complaints.','Respect the decision':'A kind finish keeps goodwill.',
+'Exact amount and date':'Precise facts build trust.','Explain Direct Debit':'Clears up the most common payment confusion.','Offer a reminder':'Prevents a missed payment.','Pause the recording':'Required: protects card details (pause check).','Confirm the payment':'They know it worked.',
+'Validate':'Agreeing they have a right to be upset calms them.','Listen first':'People calm down when they are heard.','Set a plan':'A plan gives control back.','Hear them out':'Interrupting makes anger worse.','Apologise':'One sincere sorry changes the mood.','Resolve':'Action ends the anger.','Diagnose':'Finds the real problem.',
+'Say it early':'Surprise fees upset people. Early is honest.','Explain the reason':'A reason makes a fee fair.','Give both costs':'Choice reduces complaints.','Say what happens next':'Clear next steps reduce worry.','Set a deadline':'A date gives them certainty.','Simple steps':'Short steps are easy to follow.','Offer it in writing':'Backs up what you said.','Promise only what you control':'Protects you from broken promises.',
+'Simple wait':'Short and calm. Ends the silence.','Build rapport':'Uses the wait to connect.','Say what you are doing':'They hear you are working on it.','Ask permission':'Polite. They feel respected.','Give a time':'A time stops worry.','When you return':'Thank them for waiting.','Offer a call back':'Saves them waiting a long time.'
+};
+const benOf=(m,w)=>w.b||BEN[w.m]||(m.g==='rapport'?WHYG.rapport:WHYG[m.g])||'';
+Object.assign(BEN,{'Seats and the app':'Links the seat to the app: pick seats, then check in with the same app.','Bags and the app':'Links baggage to the app: add or check baggage details from the phone.','Meals and the app':'Links meals to the app: see the booking, meal and flight times in one place.','Hotel and the app':'Links the hotel to the app: transfer and hotel details travel with them.','Anywhere, any time':'App benefit: manage the booking from any place, including the airport.','Help them download':'Walk them through the download, so the promotion turns into real use.'});
+
+const fill=t=>{let x=t;if(S.dest&&P(S.dest))x=x.replace(/\[destination\]/gi,P(S.dest).n);if(S.agent)x=x.replace(/\[Name\]/g,S.agent);const it=S.intent&&INT(S.intent);x=x.replace(/\[reason\]/gi,it?it.say:'what you called about');return x};
 const isFav=t=>S.favs.some(f=>f.t===t);
-const sb=(t,o={})=>`<div class="say rise${o.gen?' gen':''}${o.cls||''}" ${o.id?`id="${o.id}"`:''} data-t="${esc(t)}" style="--i:${Math.min(o.i||0,12)}"><div class="st">${o.tag?`<span class="tg">${esc(o.tag)}</span>`:''}<p>${ph(fill(t))}</p>${o.tip?`<span class="tip">${esc(o.tip)}</span>`:''}</div><div class="acts"><button class="ls" aria-label="Listen" title="Listen">${ic('spk')}</button><button class="fv${isFav(t)?' on':''}" aria-label="Favourite" title="Add to favourites" data-g="${esc(o.tag||'')}">${ic('star')}</button><button class="cp" aria-label="Copy" title="Copy">${ic('copy')}</button></div></div>`;
+const sb=(t,o={})=>`<div class="say rise${o.gen?' gen':''}${o.cls||''}" ${o.id?`id="${o.id}"`:''} data-t="${esc(t)}" style="--i:${Math.min(o.i||0,12)}"><div class="st">${o.tag?`<span class="tg">${esc(o.tag)}</span>`:''}${o.when?`<span class="wh">${esc(o.when)}</span>`:''}<p>${ph(fill(t))}</p>${o.tip?`<span class="tip bn">${esc(o.tip)}</span>`:''}</div><div class="acts"><button class="ls" aria-label="Listen" title="Listen">${ic('spk')}</button><button class="fv${isFav(t)?' on':''}" aria-label="Favourite" title="Add to favourites" data-g="${esc(o.tag||'')}">${ic('star')}</button><button class="cp" aria-label="Copy" title="Copy">${ic('copy')}</button></div></div>`;
 
 /* ================= STAGE LOGIC ================= */
 function filledCount(){let n=0;['who','gdpr','btype','app','errata','ins','rb','pause','exp'].forEach(k=>{if(N[k]!=='NA')n++});if(N.reasonSel!=='NA')n++;if(N.action.trim())n++;if(N.sales.length)n++;return n}
@@ -1069,12 +1194,12 @@ const stageNow=()=>S.stage||stageAuto();
 const stageName=k=>(STAGES.find(s=>s[0]===k)||[])[1]||k;
 function sortWays(m,ty){const a=m.w.map((w,i)=>({w,i,hit:!!ty&&ty!=='all'&&w.f.includes(ty)}));a.sort((x,y)=>(y.hit-x.hit)||(x.i-y.i));return a}
 function momCard(m,o={}){const ty=o.type||'',pre=o.pre||'m-';
- return `<article class="card mom rise" id="${pre}${m.id}" style="--i:${Math.min(o.i||0,10)}"><span class="tg">${esc(GL(m.g))}</span><h3>${esc(m.t)}</h3>${m.c?`<p class="cu">${esc(m.c)}</p>`:''}<div class="ways">${sortWays(m,ty).map((x,k)=>sb(x.w.t,{id:`${pre}${m.id}-${x.i}`,i:k,tag:x.w.m+(x.hit?' - best for '+TY(ty).n:''),gen:!!ty&&ty!=='all'&&!x.hit,cls:' way'})).join('')}</div>${m.rel.length?`<div class="rel"><span>Related</span>${m.rel.map(r=>{const q=MID(r);return q?`<button class="pill" data-mom="${r}">${esc(q.t)}</button>`:''}).join('')}</div>`:''}</article>`}
+ return `<article class="card mom rise" id="${pre}${m.id}" style="--i:${Math.min(o.i||0,10)}"><span class="tg">${esc(GL(m.g))}</span><h3>${esc(m.t)}</h3>${m.c?`<p class="cu">${esc(m.c)}</p>`:''}<div class="ways">${sortWays(m,ty).slice(0,o.max||99).map((x,k)=>sb(x.w.t,{id:`${pre}${m.id}-${x.i}`,i:k,when:x.w.u,tip:benOf(m,x.w),tag:x.w.m+(x.hit?' - best for '+TY(ty).n:''),gen:!!ty&&ty!=='all'&&!x.hit,cls:' way'})).join('')}</div>${m.w.length>(o.max||99)?`<button type="button" class="btn more" data-more="${m.id}">More ways (${m.w.length-o.max})</button>`:''}${m.rel.length?`<div class="rel"><span>Related</span>${m.rel.map(r=>{const q=MID(r);return q?`<button class="pill" data-mom="${r}">${esc(q.t)}</button>`:''}).join('')}</div>`:''}</article>`}
 
 /* ================= NAV ================= */
-const TABS=[['home','Map','map'],['cust','Customers','users'],['sit','Say it','chat'],['fav','Favourites','star'],['notes','Notes','file'],['flights','Flights','plane']];
-const DEPTH={home:0,cust:0,sit:0,fav:0,notes:0,flights:0,type:1,uk:1,rapport:1,dest:1};
-const ORDER=['home','cust','sit','fav','notes','flights'];
+const TABS=[['call','Call','head'],['home','Map','map'],['cust','Customers','users'],['sit','Say it','chat'],['fav','Favourites','star'],['atcom','Atcom','sys'],['notes','Notes','file'],['flights','Flights','plane']];
+const DEPTH={atcom:0,call:0,home:0,cust:0,sit:0,fav:0,notes:0,flights:0,type:1,uk:1,rapport:1,dest:1};
+const ORDER=['call','home','cust','sit','fav','atcom','notes','flights'];
 let cur=null;
 function railHTML(){const t=DEPTH[cur]?(cur==='type'?'cust':'home'):cur;return `<div class="logo">TUI</div>`+TABS.map(x=>`<button data-tab="${x[0]}" class="${t===x[0]?'on':''}">${ic(x[2])}<span>${x[1]}</span>${x[0]==='notes'&&filledCount()?`<i class="bd">${filledCount()}</i>`:''}${x[0]==='fav'&&S.favs.length?`<i class="bd">${S.favs.length}</i>`:''}</button>`).join('')}
 function show(v){
@@ -1110,7 +1235,7 @@ const MMB=[
  {k:'sit',n:'Something happened',h:5,kids:['obj','angry','no','pay','hotel','flight'].map(g=>({n:GL(g),g}))},
  {k:'tools',n:'Tools',h:285,kids:[{n:'Rapport',go:'rapport'},{n:'UK talk',go:'uk'},{n:'Destinations',go:'dest'},{n:'Flight times',go:'flights'},{n:'Call notes',go:'notes'},{n:'Sound C1',g:'c1'}]}];
 function subHTML(b){const [bk,ki]=(S.mm||'').split(':');if(bk!==b.k)return '';const k=b.kids[+ki];if(!k||!k.g||k.g==='c1')return '';
- return `<div class="subin"><span class="tg">${esc(k.n)}: tap a situation</span><div class="chips">${MOM.filter(m=>m.g===k.g).map(m=>`<button class="pill" data-mom="${m.id}">${esc(m.t)}</button>`).join('')}<button class="pill on" data-opengrp="${k.g}">Open all</button></div></div>`}
+ return `<div class="subin"><span class="tg">${esc(k.n)}: tap a situation</span><div class="chips">${MOM.filter(m=>m.g===k.g&&vis(m)).map(m=>`<button class="pill" data-mom="${m.id}">${esc(m.t)}</button>`).join('')}<button class="pill on" data-opengrp="${k.g}">Open all</button></div></div>`}
 function mapHTMLHome(){return `<div class="mm">${MMB.map((b,bi)=>`<div class="br rise" style="--h:${b.h};--i:${bi}"><div class="bn">${b.n}</div><div class="bk">${b.kids.map((k,ki)=>`<button class="node${S.mm===b.k+':'+ki?' on':''}" data-b="${b.k}" data-k="${ki}">${esc(k.n)}${k.g&&k.g!=='c1'?`<i>${MOM.filter(m=>m.g===k.g).length}</i>`:''}</button>`).join('')}</div><div class="sub${S.mm.startsWith(b.k+':')?' on':''}" id="sub-${b.k}"><div>${subHTML(b)}</div></div></div>`).join('')}</div>`}
 function renderHome(){
  $('#w-home').innerHTML=`<h1>Map</h1><p class="sub">Tap a branch to jump. The panel below follows your notes and shows what to say next.</p><div id="nowp"></div><h2>Everything, connected</h2>${mapHTMLHome()}<p class="hint"><kbd>1</kbd>-<kbd>9</kbd> customer type &nbsp; <kbd>/</kbd> search &nbsp; <kbd>N</kbd> notes &nbsp; <kbd>Q</kbd> quality &nbsp; <kbd>R</kbd> reminder</p>`;
@@ -1120,7 +1245,7 @@ let nowKey='';
 function refreshNow(force){const el=$('#nowp');if(!el)return;
  const st=stageNow(),ty=S.type||'all',key=[st,ty,S.dest,S.stage?'m':'a'].join('|');
  if(!force&&key===nowKey)return;nowKey=key;
- const ls=MOM.filter(m=>m.g===st).slice(0,4).map(m=>({m,x:sortWays(m,ty)[0]}));
+ const ls=MOM.filter(m=>m.g===st&&vis(m)).sort((a,b)=>(!!b.intent-!!a.intent)).slice(0,4).map(m=>({m,x:sortWays(m,ty)[0]}));
  el.innerHTML=`<div class="card now"><div class="hd"><span class="lb">Now</span>${STAGES.map(s=>`<button class="pill${s[0]===st?' on':''}${s[0]===st&&!S.stage?' auto':''}" data-stage="${s[0]}">${s[1]}</button>`).join('')}</div>
  <div class="nl">${ls.map((o,i)=>sb(o.x.w.t,{i,tag:o.m.t,tip:o.x.w.m})).join('')}</div>
  <div class="nfoot"><button class="btn" data-all="1">All ways for ${esc(stageName(st))}</button><span class="tip">${ty==='all'?'No customer type picked. Showing the standard lines.':'Best lines for '+esc(TY(ty).n)+' first.'} The stage follows your notes${S.stage?' (manual: tap the stage again for auto)':''}.</span></div></div>`}
@@ -1155,7 +1280,7 @@ function renderType(){
  const chips=`<div class="scroll" style="margin-bottom:12px">${TYPES.map(t=>`<button class="pill${t.id===id?' on':''}" data-swt="${t.id}">${esc(t.n)}</button>`).join('')}</div>`;
  const stageChips=`<div class="scroll" style="margin:14px 0 4px"><button class="pill${sel==='all'?' on':''}" data-ts="all">All stages</button>${STAGES.map(s=>`<button class="pill${sel===s[0]?' on':''}" data-ts="${s[0]}">${s[1]}</button>`).join('')}</div>`;
  const groups=sel==='all'?FLOW:[sel];let body='';
- groups.forEach(g=>{const ms=MOM.filter(m=>m.g===g);if(!ms.length)return;body+=(sel==='all'?`<div class="sh"><h3>${stageName(g)}</h3></div>`:'')+`<div class="grid2">${ms.map((m,i)=>momCard(m,{type:id,pre:'mt-',i})).join('')}</div>`});
+ groups.forEach(g=>{const ms=MOM.filter(m=>m.g===g&&vis(m)).sort((a,b)=>(!!b.intent-!!a.intent));if(!ms.length)return;body+=(sel==='all'?`<div class="sh"><h3>${stageName(g)}</h3></div>`:'')+`<div class="grid2">${ms.map((m,i)=>momCard(m,{type:id,pre:'mt-',i})).join('')}</div>`});
  let sit='';
  if(id!=='all'){const ms=MOM.filter(m=>!FLOW.includes(m.g)&&m.g!=='c1'&&m.w.some(w=>w.f.includes(id)));if(ms.length)sit=`<div class="sh"><h3>Situations where ${esc(T.n)} customers come up</h3></div><div class="chips">${ms.map(m=>`<button class="pill" data-mom="${m.id}"><b>${esc(GL(m.g))}</b>&nbsp;${esc(m.t)}</button>`).join('')}</div>`}
  $('#w-type').innerHTML=`<button class="back" data-go="cust">${ic('back')}Customers</button>${chips}<h1>${esc(T.n)}</h1>
@@ -1283,8 +1408,12 @@ function renderNotes(){
    ${['app','errata','ins','rb','pause','exp'].map(k=>{const f=NF.find(x=>x.k===k);return `<div class="fld"><div class="fl">${f.l}</div><div class="chips" data-f="${k}">${chipsHTML(f)}</div></div>`}).join('')}
    <div class="fld"><div class="fl">Sales?</div><div class="chips" data-multi="sales">${SALES.map(s=>`<button type="button" class="chip" data-v="${esc(s)}">${esc(s)}</button>`).join('')}</div><input type="text" data-n="salesDet" placeholder="Detail e.g. 2 seats £24 (optional)" style="margin-top:6px"></div>
   </div>
-  <div class="card" style="margin-top:14px"><h2 style="margin-top:0">Code (CAR)</h2><div class="row"><label><div class="fl">Code</div><select data-n="code"><option value="NA">NA</option>${CODES.map(c=>`<option>${c}</option>`).join('')}</select></label><label><div class="fl">Amount</div><input type="text" data-n="amt" placeholder="£"></label></div><div class="fld" style="margin-top:10px"><div class="fl">Reason</div><input type="text" data-n="creason" placeholder="Why the code was used"></div>
-   <div class="fld"><div class="fl">Memo type</div><select data-n="memo">${MEMOS.map(c=>`<option>${c}</option>`).join('')}</select></div></div>
+  <div class="card" style="margin-top:14px"><h2 style="margin-top:0">Booking memo (CAR)</h2><p class="tip" style="margin-top:0">C = Code, A = Amount, R = Reason. Add one after every change, payment or promise.</p>
+   <div class="row"><label><div class="fl">Code (C)</div><select data-n="memo">${MEMOS.map(c=>`<option>${c}</option>`).join('')}</select></label><label><div class="fl">Amount (A)</div><input type="text" data-n="amt" placeholder="£0.00"></label></div>
+   <div class="fld" style="margin-top:10px"><div class="fl">Reason (R)</div><textarea data-n="creason" placeholder="What you did, with dates and the customer's agreement"></textarea>
+    <div class="chips" style="margin-top:6px"><button type="button" class="chip na" data-usea="1">Use my action as the reason</button>${MEMOEX.map((m,i)=>`<button type="button" class="chip na" data-mex="${i}">Example: ${esc(m[0])}</button>`).join('')}</div></div>
+   <div class="fld"><div class="fl">Extra code (optional)</div><select data-n="code"><option value="NA">NA</option>${CODES.map(c=>`<option>${c}</option>`).join('')}</select></div>
+   <p class="tip">Be specific: dates and times, customer requests, promises made, every change. Save straight after the action. After a name change a memo is a must.</p></div>
  </div>
  <div class="stick"><div class="card"><div class="row" style="align-items:center;margin-bottom:10px"><b>Memo preview</b><span class="tip" id="ncount" style="text-align:right"></span></div><pre class="memo" id="memo"></pre>
   <label class="tip" style="display:flex;gap:8px;align-items:center;margin:10px 0"><input type="checkbox" id="hna" style="width:auto"> Leave out lines that are NA</label>
@@ -1299,6 +1428,8 @@ function syncNotes(){const p=$('#w-notes');
  const c=$('#ncount');if(c)c.textContent=filledCount()+'/12 filled';
  $('#rail').innerHTML=railHTML();saveN();refreshNow(false);qcDraw()}
 $('#w-notes').addEventListener('click',e=>{
+ const mx=e.target.closest('[data-mex]');if(mx){memoExample(+mx.dataset.mex);return}
+ if(e.target.closest('[data-usea]')){if(N.action.trim()){N.creason=N.action.trim();saveN();syncNotes()}else toast('Add an action first');return}
  const g=e.target.closest('[data-f] .chip');
  if(g){const k=g.parentNode.dataset.f,v=g.dataset.v;N[k]=(N[k]===v&&v!=='NA')?'NA':v;syncNotes();return}
  const m=e.target.closest('[data-multi] .chip');
@@ -1310,7 +1441,7 @@ $('#w-notes').addEventListener('click',e=>{
 $('#w-notes').addEventListener('input',e=>{const el=e.target;if(el.id==='hna'){N.hideNA=el.checked;syncNotes();return}if(el.dataset.n){N[el.dataset.n]=el.value;syncNotes()}});
 $('#w-notes').addEventListener('change',e=>{const el=e.target;if(el.dataset.n){N[el.dataset.n]=el.value;syncNotes()}});
 function copyMemo(){copyText(memoText(),'Memo copied');S.qc[9]=true;saveS();qcDraw()}
-function newCall(){N=blank();S.qc=QC.map(()=>false);S.stage='';S.type='';S.tstage='';saveS();renderNotes();setType('');qcDraw();tsIdx=0;toast('New call ready')}
+function newCall(){N=blank();S.qc=QC.map(()=>false);S.stage='';S.type='';S.tstage='';S.intent='';S.cs={done:{},skip:{}};S.cstep=0;S.cfin=false;S.scn=-1;S.rub=[];S.vd={};S.ps={};S.vnl=false;S.pcur='';S.dir='in';saveS();renderNotes();setType('');qcDraw();tsIdx=0;renderCall();toast('New call ready')}
 $('#nCopy').onclick=copyMemo;$('#nNew').onclick=newCall;
 
 /* ================= REMINDERS ================= */
@@ -1363,7 +1494,7 @@ function openSpop(on){const p=$('#spop');if(on){openPop(false);p.innerHTML=spopH
 $('#spk').onclick=()=>openSpop(!$('#spop').classList.contains('on'));
 $('#spop').addEventListener('input',e=>{if(e.target.id==='srate'){TTS.rate=+e.target.value;store.set('tui-rate',TTS.rate);$('#srt').textContent=TTS.rate.toFixed(2)}});
 $('#spop').addEventListener('change',e=>{if(e.target.id==='svoice'){const v=TTS.voices.find(x=>x.name===e.target.value);if(v){TTS.voice=v;store.set('tui-voice',v.name)}}});
-$('#spop').addEventListener('click',e=>{if(e.target.closest('#stest'))TTS.say("Good morning, thank you for calling TUI. You're through to your advisor. How can I help you today?")});
+$('#spop').addEventListener('click',e=>{if(e.target.closest('#stest'))TTS.say("Thank you for calling TUI Pre-Travel, this is your advisor. How can I help you today?")});
 
 /* ================= QUALITY PANEL ================= */
 const qcAuto=i=>i===5?N.app!=='NA':i===7?N.gdpr!=='NA':i===8?N.pause==='Yes':i===11?N.exp==='Yes':false;
@@ -1371,7 +1502,7 @@ const qcOn=i=>!!S.qc[i]||qcAuto(i);
 const qcDone=()=>QC.every((q,i)=>qcOn(i));
 let qcShowing=false;
 function qcUpd(){const n=QC.filter((q,i)=>qcOn(i)).length;$('#qcCount').textContent=n+'/'+QC.length;$('#qcProg').style.width=(n/QC.length*100)+'%';const b=$('#qcBadge');b.textContent=n+'/'+QC.length;b.classList.toggle('full',n===QC.length)}
-function qcDraw(){$('#qcList').innerHTML=QC.map((q,i)=>`<label class="qci${qcOn(i)?' done':''}"><input type="checkbox" data-q="${i}"${qcOn(i)?' checked':''}${qcAuto(i)?' disabled':''}><span>${esc(q[0])}${qcAuto(i)?' <em>from notes</em>':''}</span><button type="button" class="go" data-qgo="${i}" title="Open the lines for this">${ic('chev').replace('class="ic"','class="ic r"')}</button></label>`).join('');qcUpd()}
+function qcDraw(){$('#qcList').innerHTML=QC.map((q,i)=>`<label class="qci${qcOn(i)?' done':''}"><input type="checkbox" data-q="${i}"${qcOn(i)?' checked':''}${qcAuto(i)?' disabled':''}><span>${esc(q[0])}${qcAuto(i)?' <em>from notes</em>':''}</span><button type="button" class="go" data-qgo="${i}" title="Open the lines for this">${ic('chev').replace('class="ic"','class="ic r"')}</button></label>`).join('');qcUpd();if(cur==='call')callSide()}
 function qcVisible(v){qcShowing=v;$('#qc').classList.toggle('show',v);$('#qcb').classList.toggle('on',v)}
 $('#qcList').addEventListener('change',e=>{const c=e.target.closest('[data-q]');if(!c)return;S.qc[+c.dataset.q]=c.checked;saveS();qcDraw()});
 $('#qcList').addEventListener('click',e=>{const g=e.target.closest('[data-qgo]');if(g){qcVisible(false);goTarget(QC[+g.dataset.qgo][1])}});
@@ -1397,7 +1528,7 @@ $('#stallOff').onclick=()=>{S.auto=false;saveS();setAutoUI();autoStop();toast('A
 const tsEl=$('#toast2');let tsHideTm=null,tsIdx=0;
 function tsHide(){clearTimeout(tsHideTm);tsEl.classList.remove('show')}
 function tsNext(){
- if(!S.auto||document.hidden||qcShowing)return;
+ if(!S.auto||document.hidden||qcShowing||cur==='call')return;
  const rem=QC.map((q,i)=>i).filter(i=>!qcOn(i));if(!rem.length)return;
  const i=rem.find(x=>x>=tsIdx),k=i===undefined?rem[0]:i;tsIdx=k+1;
  tsEl.dataset.i=k;
@@ -1411,7 +1542,7 @@ const T={st:0,qc:0,qm:0,ts:0};
 function setAutoUI(){$('#autob').classList.toggle('on',!!S.auto);$('#autob').title=S.auto?'Auto helpers are on (tap to turn off)':'Auto helpers are off (tap to turn on)'}
 function autoStop(){clearTimeout(T.st);clearTimeout(T.qc);clearTimeout(T.qm);clearInterval(T.ts);stHideNow();qcVisible(false);tsHide()}
 function stCycle(){if(!S.auto)return;stNext();stShow();T.st=setTimeout(()=>{stHideNow();T.st=setTimeout(stCycle,20000)},20000)}
-function qcCycle(){if(!S.auto)return;if(qcDone()){T.qc=setTimeout(qcCycle,20000);return}
+function qcCycle(){if(!S.auto)return;if(cur==='call'){T.qc=setTimeout(qcCycle,20000);return}if(qcDone()){T.qc=setTimeout(qcCycle,20000);return}
  qcVisible(true);T.qc=setTimeout(function h(){if(qcHold){T.qc=setTimeout(h,3000);return}qcVisible(false);T.qc=setTimeout(qcCycle,20000)},20000)}
 function autoStart(){autoStop();if(!S.auto)return;stT.textContent=stPhrase();T.st=setTimeout(stCycle,10000);T.qc=setTimeout(qcCycle,30000);T.ts=setInterval(tsNext,10000)}
 $('#autob').onclick=()=>{S.auto=!S.auto;saveS();setAutoUI();if(S.auto){autoStart();toast('Auto helpers on: stall phrases, quality panel and reminders')}else{autoStop();toast('Auto helpers off')}};
@@ -1459,6 +1590,7 @@ const SYN=[
 ['easy','friendly','nice','relaxed','هادي'],
 ['uk','british','slang','meaning','decode','بريطاني','معني','بيقصد']].map(g=>g.map(norm));
 const IDX=[];
+function buildIdx(){IDX.length=0;
 const ix=(kind,title,text,sub,tx,target)=>IDX.push({kind,title,text,sub,tx:norm(tx),tt:norm(title),words:[...new Set(norm(title+' '+tx).split(' '))].filter(w=>w.length>2),target});
 TYPES.forEach(t=>ix('Customer',t.n,'',t.spot,t.n+' '+t.spot+' '+t.dont+' customer type',{k:'type',id:t.id}));
 MOM.forEach(m=>m.w.forEach((w,wi)=>ix(GL(m.g),m.t,w.t,w.m,m.t+' '+w.m+' '+w.t+' '+m.c+' '+GL(m.g)+' '+w.f.map(f=>TY(f).n).join(' '),{k:'mom',id:m.id,wi})));
@@ -1467,6 +1599,8 @@ RAPPORT.forEach(r=>r[1].forEach(q=>ix('Rapport',q,q,r[0],q+' '+r[0]+' rapport sm
 UKD.forEach((u,i)=>ix('UK talk',u[0].replace(/"/g,''),u[2],'Means: '+u[1],u.join(' ')+' uk british',{k:'uk',i}));
 DESTS.forEach(d=>ix('Flight',d.n,'',d.cc,[d.n,d.ar,d.cc,d.lm.join(' '),d.q,'flight hours time'].join(' '),{k:'flight',id:d.id}));
 DC.items.forEach((c,i)=>ix('Country',c.n,c.talk,c.f[2]+' - '+c.f[3],[c.n,c.lm.join(' '),c.talk,c.qs.join(' '),'destination country'].join(' '),{k:'country',i}));
+if(typeof PROCS!=='undefined')PROCS.forEach(p=>ix('Atcom',p.n,p.say||'',p.g+' - steps in Atcom',[p.n,p.when,p.g,p.steps.join(' '),p.note||'','atcom how to steps system'].join(' '),{k:'proc',id:p.id}));
+}
 const STOP=new Set(['too','the','and','for','can','you','how','with','are','what','not','this','that','who','got','has','have','its']);
 function trans(a,b){if(a.length!==b.length)return false;for(let i=0;i<a.length-1;i++){if(a[i]!==b[i]){return a[i]===b[i+1]&&a[i+1]===b[i]&&a.slice(i+2)===b.slice(i+2)&&a.slice(0,i)===b.slice(0,i)}}return false}
 function lev(a,b,m){if(Math.abs(a.length-b.length)>m)return m+1;const p=[];for(let j=0;j<=b.length;j++)p[j]=j;for(let i=1;i<=a.length;i++){let prev=p[0];p[0]=i;let rm=p[0];for(let j=1;j<=b.length;j++){const t=p[j];p[j]=Math.min(p[j]+1,p[j-1]+1,prev+(a[i-1]===b[j-1]?0:1));prev=t;if(p[j]<rm)rm=p[j]}if(rm>m)return m+1}return p[b.length]}
@@ -1494,6 +1628,7 @@ function openRes(e){if(!e)return;const q=$('#q').value.trim();if(q){S.recent=[q]
  if(t.k==='type'){setType(t.id);S.tstage=stageNow();show('type')}
  else if(t.k==='mom')goMoment(t.id,t.wi);
  else if(t.k==='swap'){S.sg='c1';saveS();renderSit();show('sit');pointAt('m-'+t.w.id)}
+ else if(t.k==='proc')goProc(t.id);
  else if(t.k==='rapport')show('rapport');
  else if(t.k==='uk'){show('uk');pointAt('uk-'+t.i)}
  else if(t.k==='country'){S.country=t.i;saveS();renderDest();show('dest')}
@@ -1522,10 +1657,441 @@ document.addEventListener('keydown',e=>{
  else if(/^[1-9]$/.test(k)&&['home','cust','type'].includes(cur)){const t=TYPES[+k];if(t){setType(t.id);S.tstage=stageNow();if(cur==='type')renderType();else show('type')}}
  else if(k==='0'&&['home','cust','type'].includes(cur)){setType('all');S.tstage=stageNow();if(cur==='type')renderType();else show('type')}});
 
+/* ================= CALL MODE ================= */
+const STEPS=[['open','Open','Greet. Confirm why they called.'],['verify','Verify','GDPR: only the right person.'],['discover','Discover','Ask, then listen.'],['resolve','Resolve','Fix it. Say what you can do.'],['offer','Offer','One relevant extra. The app.'],['close','Close','Recap, expectations, goodbye.']];
+const SCEN=[
+['Family flight-only booking','Sarah, 38, booking four seats to Tenerife. Wants the cheapest option.','She has not thought about seats or bags and is price-focused.','Open well, discover needs, offer seats together and bags naturally.','easy','extras','price'],
+['Last-minute cancellation','Mark, 52, flight cancelled this morning. Angry and tired.','He wants a refund and compensation: "this is the worst service".','De-escalate, explain options clearly, avoid over-promising.','hard','problem','angry'],
+['Needs help with assistance','Margaret, 74, not confident with technology.','She wants to add a bag and arrange wheelchair assistance for her husband.','Be patient, slow down, confirm every detail back.','easy','assist','confused'],
+['Duplicate booking','James, 45, booked twice and was charged twice.','Anxious, wants one booking cancelled immediately.','Verify, confirm which booking to keep, explain next steps honestly.','med','cancel','anxious'],
+['Cancellation due to illness','Priya, 33, partner is unwell and they cannot travel.','Upset and unsure of her options.','Empathise, explain options and documents, no promises on refunds.','med','cancel','anxious'],
+['Price comparer','Dan, 29, saw a cheaper price on another site.','Says "match it or I will book there".','Use ACAA, clarify like-for-like, offer value, no badmouthing.','med','other','price'],
+['Payment keeps failing','Olivia, 41, card declined three times.','Frustrated, worried the price will go up.','Stay calm, offer options, protect the booking if possible.','med','pay','anxious'],
+['Name correction before travel','Tom, 36, misspelled his partner\'s name. Flying in two days.','Stressed about being refused boarding.','Treat as urgent, explain process and fee, reassure honestly.','med','amend','anxious'],
+['Honeymoon couple','Aisha and Ben, newly married, booking a special trip.','Excited and open to ideas.','Discover, then offer a relevant upgrade (seat, room or transfer).','easy','extras','easy'],
+['Demands a manager immediately','Robert, 60, refuses to give security details.','"Get me a manager now. I am not answering questions."','Stay firm and polite on verification, offer a path forward, follow escalation policy.','hard','other','demanding'],
+['Delayed flight and a wedding','Karen, 48, flight delayed, will miss a wedding.','Emotional, wants a solution right now.','Empathise, check live status, realistic options, no false promises.','hard','problem','anxious'],
+['System lag, missing booking','Hassan, 55, cannot find his booking confirmation.','Your system is slow and the booking is not showing.','Be open about the system, run checks aloud, offer a callback.','med','docs','rush'],
+['Safety question','Linda, 62, worried about travelling after seeing the news.','Asks "Is it safe to go?"','No opinions. Point to official guidance, explain policy options.','med','other','anxious'],
+['Third call about a refund','Paul, 50, has called twice already about a refund.','Exasperated: "nobody does anything".','Read the notes, own the problem, set specific actions and timelines.','hard','pay','angry'],
+['Hotel room request','Helen, 44, wants connecting rooms and a cot.','Worried the hotel will not honour her requests.','Take each request exactly, say it is passed to the hotel and not guaranteed.','med','hotel','chatty'],
+['Board basis confusion','Gary, 57, thinks all inclusive means everything is free.','Surprised by what is included, getting annoyed.','Explain the board basis clearly, check inclusions, offer options.','med','hotel','confused']];
+const RUBRIC=['Warm, professional opening','Verified the customer correctly','Listened and paraphrased the issue','Showed genuine empathy','Gave clear, accurate options','Offered a relevant upsell (when appropriate)','Confirmed next steps and timelines','Closed professionally and wrote clear notes'];
+/* extra moments: app links + rapport */
+MOM.push({id:'u8',g:'offer',t:'Link the extra to the TUI app',c:'Offer the extra and the app in one breath. Record it under App.',w:[
+ {m:'Seats and the app',t:"You can choose your seats now, and then check in and see your boarding pass on the free TUI app. Shall I go through the seats first?",f:['anxious','easy']},
+ {m:'Bags and the app',t:"I'll add the bag now. In the TUI app you can see your baggage allowance and your booking any time, so nothing is a surprise at the airport.",f:['rush']},
+ {m:'Meals and the app',t:"I'll pre-order the meals, and you'll see them in the TUI app along with your flight times, all in one place.",f:['easy','chatty']},
+ {m:'Hotel and the app',t:"I'll add the transfer, and the TUI app will keep your hotel and transfer details with you on the day, so there is nothing to look for.",f:['confused']},
+ {m:'Anywhere, any time',t:"The free TUI app lets you manage your booking from anywhere, even at the airport. Would you like me to tell you how to download it?",f:['rush','price']},
+ {m:'Help them download',t:"It's quick. Search for TUI in your app store, and I'll stay on the line while you find it.",f:['confused','anxious']}],rel:['u5','u1']});
+(function(){const R=RAPPORT;[['rap0','open','Friendly start',0],['rap1','discover','Rapport while the system loads',1],['rap2','discover','Who is travelling',2],['rap3','close','Rapport before closing',3]].forEach(([id,g,t,i])=>MOM.push({id,g,t,c:'A genuine question that shows interest. Listen to the answer.',w:R[i][1].map(x=>({m:'Ask',t:x,f:[]})),rel:['d3'],rapport:true}))})();
+const STEPQC={open:[0],verify:[7],discover:[10,2,1],resolve:[6,8],offer:[4,5],close:[11,3,9]};
+const QCWHY=['A warm welcome that names TUI Pre-Travel and what they chose on the menu.','Genuine excitement: ask about the trip, then react to the answer.','Let them finish. Show empathy before solving.','Close to match this call. Pause and let them answer.','Offer one relevant extra. Link it to what they said.','Mention the TUI app with a benefit that fits them.','Try once to save the booking and explain fees.','Only the right person. No details before the checks.','Pause the recording for card details.','Notes are copied into the system.','Mix open and closed questions. Solve it first time.','Say what happens next, and when.'];
+const OFFERBY={extras:['u1','u2','u3'],hotel:['u4','u3'],amend:['u1','u4'],pay:['u1','u2'],problem:['u3'],docs:['u1','u2'],assist:['u1'],cancel:[],other:['u1','u2']};
+function qcMoms(i){const it=S.intent;
+ if(i===0)return S.dir==='out'?['o6','rap0']:[it?'i'+it:null,'o1','rap0'];
+ if(i===2)return ['rap4','rap1','rap2'];
+ if(i===7)return ['v1','v2'];
+ if(i===10)return ['d1',it?'q'+it:null,'d5','d2'];
+ if(i===1)return ['l1','a1'];
+ if(i===6)return ['n3','u7'];
+ if(i===8)return ['p2'];
+ if(i===4){const o=OFFERBY[it||'other'];return (o.length?o:['u7']).concat(['u9'])}
+ if(i===5)return ['u5','u8'];
+ if(i===11)return ['c2','c3'];
+ if(i===3)return ['c1','rap3'];
+ return []}
+function qcCardHTML(i,n){const on=qcOn(i);const ms=qcMoms(i).filter(Boolean).map(MID).filter(Boolean);
+ const extra=i===9?`<div class="row" style="margin:8px 0"><button class="btn pr" id="ccopy3">${ic('copy')}Copy memo</button><span class="tip">Tap it when the notes are done. This ticks the check.</span></div><pre class="memo" id="cmemo">${esc(memoText())}</pre>`:'';
+ return `<section class="qcard rise${on?' done':''}" data-qci="${i}" style="--i:${n}"><header><label class="qh"><input type="checkbox" data-cq="${i}"${on?' checked':''}${qcAuto(i)?' disabled':''}><span class="qt"><b>${esc(QC[i][0])}</b><small>${esc(QCWHY[i])}${qcAuto(i)?' (ticks from your notes)':''}</small></span></label></header>${extra}<div class="grid2">${ms.map((m,k)=>momCard(m,{type:S.type,pre:'cm'+i+'-',i:k,max:2})).join('')}</div></section>`}
+function stepMore(k,shown){const sh=new Set(shown);const ms=MOM.filter(m=>m.g===k&&vis(m)&&!sh.has(m.id)&&!m.rapport&&!m.intent);return ms.length?`<div class="also"><span class="tg">Also might come up</span><div class="chips">${ms.map(m=>`<button class="pill" data-alsom="${m.id}">${esc(m.t)}</button>`).join('')}</div><div id="alsoBox"></div></div>`:''}
+const qLeft=k=>STEPQC[k].filter(q=>!qcOn(q)).length;
+const qLeftTxt=n=>n?n+' quality check'+(n>1?'s':'')+' in this step':'All quality checks for this step are done';
+/* ===== Rework: every line has a trigger ("Customer says" / "Use when") and confirms back ===== */
+const RW=(id,rows)=>{const m=MID(id);if(!m)return;m.w=rows.map(r=>({m:r[0],u:r[1],t:r[2],b:r[3]||'',f:r[4]?r[4].split(','):[]}))};
+const CB='Confirms what they said, so you never guess and they never repeat themselves.';
+const CS=s=>'Customer says: "'+s+'"';
+const NOSAY='Customer has only chosen the menu option and has not said more yet';
+/* ---- opening confirm lines per intent ---- */
+const IOP={
+pay:[['Pay the balance',CS('I want to pay my balance.'),"Of course. So you'd like to pay the balance on your booking today, is that right?"],['Make a payment',CS('I need to make a payment.'),"Certainly. Is that a payment towards the balance, or the deposit?"],['Failed payment',CS('My card was declined.'),"I'm sorry about that. So the payment didn't go through on your card, is that right? Let's get it sorted."],['Next payment',CS('When is my next payment due?'),"Good question. So you'd like the date and amount of your next payment, is that right?"],['Menu only',NOSAY,"I can see you chose payments. Is it to make a payment, or to check something about one?"]],
+amend:[['Change dates',CS('I need to change the dates.'),"Of course. So you'd like to change your travel dates, is that right?"],['Name error',CS('There is a mistake on the name.'),"Thank you for telling me. So a name on the booking needs correcting, is that right?"],['Change flights',CS('Can I change the flights?'),"Certainly. So you'd like to look at different flights. Is that the outbound, the return, or both?"],['Add a traveller',CS('I want to add someone.'),"Of course. So you'd like to add another traveller to the booking, is that right?"],['Menu only',NOSAY,"I can see you chose changes. Is it the dates, a name, or something else?"]],
+cancel:[['Cancel all',CS('I want to cancel.'),"I'm sorry to hear that. So you'd like to cancel the whole booking, is that right?"],['Cannot travel',CS("We can't travel any more."),"I'm sorry to hear that. So you're unable to travel and you'd like to know your options, is that right?"],['Ask the cost',CS('How much would it cost to cancel?'),"Of course. So you'd like to know what cancelling would cost, is that right? I'll check that for you."],['Someone is ill',CS('One of us is ill.'),"I'm sorry to hear that. So someone on the booking is unwell and can't travel, is that right?"],['Menu only',NOSAY,"I can see you chose cancellations. Is it to cancel the booking, or to find out the cost first?"]],
+docs:[['No tickets',CS("I haven't got my tickets."),"I'm sorry about that. So you haven't received your e-tickets yet, is that right?"],['Resend',CS('Can you resend my confirmation?'),"Of course. So you'd like the confirmation sent again, is that right?"],['Email missing',CS('The email never arrived.'),"I'm sorry about that. So the email with your documents hasn't reached you, is that right?"],['Boarding pass',CS('I need my boarding pass.'),"Certainly. So you'd like your boarding pass, is that right? Let me check where things stand."],['Menu only',NOSAY,"I can see you chose documents. Is it your e-tickets, your itinerary, or something else?"]],
+extras:[['Add a bag',CS('I want to add a bag.'),"Of course. So you'd like to add a bag to your booking, is that right?"],['Choose seats',CS('Can I choose seats?'),"Certainly. So you'd like to select seats for your flight, is that right?"],['Add meals',CS("I'd like to add meals."),"Of course. So you'd like to pre-order meals for your flight, is that right?"],['Upgrade',CS('Can I upgrade?'),"Certainly. So you'd like to look at an upgrade, is that right? Is it for the flight or the hotel?"],['Menu only',NOSAY,"I can see you chose extras. Is it seats, bags, meals, or something else?"]],
+hotel:[['Room request',CS('I need to make a room request.'),"Of course. So you'd like to add a request for your room, is that right?"],['Early check-in',CS('Can we check in early?'),"Certainly. So you'd like to ask about an early check-in, is that right? I'll pass the request to the hotel."],['Room change',CS('I want a different room.'),"I understand. So you'd like to change the room type, is that right?"],['Board basis',CS('What does all inclusive cover?'),"Good question. So you'd like to know what's included in your board basis, is that right?"],['Menu only',NOSAY,"I can see you chose hotel requests. Is it about the room, the board basis, or something else?"]],
+assist:[['Wheelchair',CS('My husband needs a wheelchair.'),"Of course. So you'd like to arrange wheelchair assistance for your husband, is that right?"],['Help at the airport',CS('I need help at the airport.'),"Certainly. So you'd like assistance at the airport, is that right? I'll take the details carefully."],['Limited mobility',CS('Mum finds walking hard.'),"Thank you for telling me. So your mum will need some help getting around, is that right?"],['Equipment',CS('I travel with a mobility scooter.'),"Of course. So you'll be travelling with a mobility scooter, is that right? I'll note the details."],['Menu only',NOSAY,"I can see you chose special assistance. Who is it for, and what help would be useful?"]],
+problem:[['Time change',CS('My flight time has changed.'),"I'm sorry about the disruption. So the airline has changed your flight time, is that right?"],['Cancelled flight',CS('My flight has been cancelled.'),"I'm so sorry. So your flight has been cancelled, is that right? Let me look at your options."],['Missed connection',CS("I'll miss my connection."),"I understand. So the change means you may miss a connecting flight, is that right?"],['Airline email',CS('The airline emailed me.'),"Thank you for letting me know. So you've received a message about a change to your flight, is that right?"],['Menu only',NOSAY,"I can see you chose a delay or disruption. Is it a time change, a cancellation, or something else?"]],
+other:[['Booking question',CS('I have a question about my booking.'),"Of course. So you have a question about your booking, is that right? Go ahead."],['Check something',CS('I want to check something.'),"Certainly. So you'd like to check something on your booking, is that right?"],['Complaint',CS("I'd like to make a complaint."),"I'm sorry to hear that. So you'd like to raise a complaint, is that right? I'll listen first."],['Promo code',CS('I have a promo code.'),"Of course. So you'd like to use a promo code on your booking, is that right?"],['Menu only',NOSAY,"I can see you chose something else. Is it about a change, a payment, or a question?"]]
+};
+Object.keys(IOP).forEach(k=>RW('i'+k,IOP[k].map(r=>[r[0],r[1],r[2],CB])));
+/* ---- discovery ---- */
+RW('d1',[
+['Short request',CS('I want to change my flight.'),"So you'd like to change your flight, is that right? Is it the outbound, the return, or both?",CB],
+['Vague request',CS('I have a problem with my booking.'),"I'm sorry to hear that. Is it about the dates, a payment, or something else?",'A short choice of topics narrows it down fast (closed question).'],
+['Long story',CS('(a long explanation)'),"Thank you for explaining. So the main thing is [issue], and you'd like [outcome], have I got that right?",'Pulls a long story into one point they can confirm.'],
+['Upset customer',CS("This is the third time I've called."),"I can hear how frustrating that is. So [issue], and you'd like it fixed today, is that right?",'Shows empathy and a clear goal in one sentence.'],
+['They told you at the menu',NOSAY,"I can see you chose [reason], so we'll start there. Is that still what you need today?",'Uses what they already told the system, so they do not repeat it.']]);
+RW('d2',[
+['Recap one issue',CS('(you have heard the whole request)'),"Just so I've got this right: [recap]. Is that correct?",'Stops mistakes before you act.'],
+['Check nothing is missing','Before you make a change',"Let me make sure I've understood everything: [recap]. Have I missed anything?",'Catches missing details early.'],
+['Two things','Customer raised two issues',"So there are two things to sort: first [A], then [B]. Shall I start with [A]?",'Makes a long call feel manageable.'],
+['Dates and names','Before you confirm anything',"I'll repeat the key details back so we're both certain: [dates and names].",'Prevents wrong names and dates.'],
+['Worry named',CS("I'm worried we'll miss it."),"It sounds like the main worry is [issue]. Is that right?",'Shows empathy by naming the worry.']]);
+MOM.push({id:'d5',g:'discover',t:'Turn a vague request into a clear need',c:'Confirm what they said, then ask one narrowing question.',w:[
+ {m:'Cheapest',u:CS('I just want the cheapest option.'),t:"Absolutely, I'll find you the best value. Are your dates flexible by a day or two? That can often bring the price down.",b:'Finds real savings without assuming.',f:['price']},
+ {m:'Sun',u:CS("I don't know where to go, I just want some sun."),t:"Lovely! How long are you away, who's travelling, and do you want to relax by the pool or have lots to do?",b:'Three quick questions, then you can recommend.',f:['indecisive']},
+ {m:'Small change',u:CS('I just need to change something small.'),t:"No problem. So exactly what would you like to change: the date, a name, or something else? I'll check what's possible and any costs.",b:'"Small" changes can have fees. Be specific first.',f:[]},
+ {m:'Big group',u:CS("I'm booking for about 12 of us."),t:"That sounds like a great trip! Is it a special occasion? Are you all travelling together, from the same airport? Group bookings may have different terms, so let me check.",b:'Groups often have special rules.',f:[]},
+ {m:'Not sure',u:CS("I'm not sure what I need."),t:"That's fine, we can work it out together. What matters most to you: the price, the dates, or the hotel?",b:'You become the guide without pushing.',f:['indecisive','confused']}],rel:['d1','d2']});
+/* ---- rapport that reacts to what they say (original playbook) ---- */
+MOM.push({id:'rap4',g:'discover',t:'React to what they tell you',c:'One friendly reply, then listen. Use it later in the call.',rapport:true,w:[
+ {m:'Destination',u:CS("We're going to Tenerife in August."),t:"Lovely, Tenerife in August! Is it your first time there, or have you been before?",b:'"First time?" is the safest British-friendly question.',f:[]},
+ {m:'Travel party',u:CS("It's for me, my husband and the kids."),t:"That sounds like a great family holiday. How old are the little ones? It helps me suggest the right seats and options.",b:'Ask about children only when it helps the booking, and say why.',f:[]},
+ {m:'Anniversary',u:CS("It's our 25th wedding anniversary."),t:"Congratulations, that's wonderful! Let's make sure it's a really special trip. Is there anything you've been dreaming about for it?",b:'Celebrate first, offer upgrades later.',f:[]},
+ {m:'Apology',u:CS("Sorry, I'm rambling on..."),t:"Not at all, please take your time. I want to get this exactly right for you.",b:'British customers apologise a lot. Reassure, never rush.',f:['chatty','confused']},
+ {m:'Weather',u:CS('Typical British weather, we need some sun!'),t:"Ha, I know the feeling! Hopefully we can get you somewhere sunny. What kind of break are you after?",b:'One light reply, then back to the call.',f:[]},
+ {m:'Thanks',u:CS("Thanks, you've been brilliant."),t:"My pleasure, it's been lovely helping you. I hope you have a fantastic trip.",b:'Accept thanks warmly and keep it short.',f:[]}],rel:['d3']});
+const RU={rap0:['After the greeting, any customer','Any customer','Any customer, not about the trip','Customer has mentioned the trip'],rap1:['While your system loads','While your system loads','Learn their travel style','Returning customer?'],rap2:['You do not know yet who is travelling','You do not know the reason for the trip','Only if children are already mentioned','You do not know yet who is travelling'],rap3:['Close to departure','Before closing any call','Close to departure']};
+Object.keys(RU).forEach(id=>{const m=MID(id);m.w.forEach((w,i)=>{w.u='Use when: '+(RU[id][i]||'any customer')})});
+/* ---- offers: no assumptions, each line has a trigger ---- */
+RW('u1',[
+['No seats chosen','Use when: no seats are selected yet',"I can see no seats are selected yet. Would you like me to reserve them now, so you're sorted before check-in?",'Fixes a real gap in the booking.'],
+['Travelling together','Use when: more than one traveller on the booking',"Since you're travelling together, would you like me to reserve your seats side by side?",'Tied to the group, so it feels like care, not a sale.'],
+['Long flight','Use when: the flight is 4 hours or more',"It's a flight of about [X hours], so choosing your seats could make it more comfortable. Shall I look at the options?",'A real reason: comfort on a long flight.'],
+['Extra legroom','Use when: the customer mentions comfort, height or back pain',"If you'd like more space, Extra Legroom can make a real difference. Would you like me to check what's available?",'Solves a real problem.'],
+['In a hurry','Use when: the customer is rushed',"Would you like me to reserve seats? It only takes a moment.",'Low pressure. Easy to say yes.'],
+['Unsure','Use when: the customer hesitates',"I can pick seats for you now, or you can add them later up to [deadline]. Which would you prefer?",'Gives a choice and control.']]);
+RW('u2',[
+['Longer trip','Use when: a week or more, standard allowance',"You're away for [X days] and your allowance is [X]kg each. Adding weight now is much cheaper than paying at the airport. Shall I add [10]kg?",'Compares with what they would pay later.'],
+['Shopping','Use when: they mention shopping or souvenirs',"If you're likely to bring things home, a bit of extra weight now is a good idea. Shall I look at the options?",'Linked to what they said.'],
+['Price per person','Use when: they ask the price',"It's £[X] each way per person for [10]kg. Would you like me to add that?",'A clear unit price removes doubt.'],
+['Group','Use when: several travellers',"With everyone's luggage, an extra bag can be handy. Shall I look at that for you?",'Linked to the group size.'],
+['Add later','Use when: they say no or hesitate',"You can add it later online if you'd rather decide closer to the date.",'No pressure. They stay in control.']]);
+RW('u3',[
+['No meal booked','Use when: no meal is pre-booked',"Would you like to pre-order a meal? It guarantees your choice, and it's usually better value than buying on board.",'Value and certainty.'],
+['Dietary need','Use when: they mention a dietary need',"Pre-ordering makes sure your dietary needs are covered. Would you like me to add that?",'Care first, then the sale.'],
+['Long flight','Use when: the flight is 4 hours or more',"On a flight of about [X hours], a pre-ordered meal is a real comfort. Shall I add one for each of you?",'A real reason to buy.'],
+['Travelling together','Use when: more than one traveller',"Would you like me to add meals for everyone, so it's all sorted?",'One offer covers everyone.'],
+['Keep it simple','Use when: they are rushed',"Shall I add a meal for each of you?",'Short and easy to answer.']]);
+RW('u4',[
+['Half board','Use when: the booking is room only or bed and breakfast',"Half board works out at roughly £[X] a day, so your evening meals are sorted. Would you like me to look at it?",'A daily price is easy to compare.'],
+['Special occasion','Use when: they mention an anniversary or honeymoon',"Congratulations! As it's such a special trip, would you like me to look at a room upgrade?",'Celebrate first, then offer.'],
+['Sea view','Use when: a standard room is booked',"For £[X] extra, you could have a sea-view room. Shall I check availability?",'Describes the experience, not just the room.'],
+['No transfer','Use when: no transfer is booked',"Do you have transport arranged from the airport to your hotel? I can add a transfer so you're met on arrival.",'Asks about their plan first, then offers the fix.'],
+['Extra night','Use when: they arrive late or leave early',"If you added one more night, you'd make the most of your time away. It would cost about £[X] per person. Shall I check availability?",'Per-person price feels small.']]);
+RW('u5',[
+['Standard','Use when: every customer before the call ends',"Before you travel, I'd highly recommend downloading the TUI app if you haven't already. It's completely free and will make your holiday so much easier.",'Warm and confident opening for the app.'],
+['Checklist','Use when: the customer is travelling soon or seems unsure',"The app has a handy travel checklist to help you prepare, so nothing gets forgotten.",'Benefit: helps a worried customer prepare.'],
+['Check-in and boarding pass','Use when: the booking includes a flight',"You can check in and have your boarding pass right on your phone, so there's less to carry at the airport.",'Benefit: an easy day at the airport.'],
+['Live times and transfers','Use when: they ask about times or transfers',"The app shows live flight times and transfer information, so you always know where you need to be.",'Benefit: no need to call to check.'],
+['All in one place','Use when: they have lost documents before or ask for details',"All your booking details are in one place in the app, so you won't have to search for emails.",'Benefit: saves searching.'],
+['Weather','Use when: they ask about the weather or what to pack',"The app also has weather forecasts for your destination, which helps with packing.",'Benefit: useful before they pack.'],
+['Short version','Use when: the customer is in a hurry',"The TUI app is free, and it has your checklist, check-in, boarding pass, live flight times and your booking details all in one place.",'Quick and complete.'],
+['Download tip','Use when: you are closing the app mention',"I'd suggest downloading it now and having a look around. Make sure to download any important documents before you travel, as some features work best with an internet connection.",'A practical tip that avoids problems abroad.'],
+['Already has it','Use when: they say they already have the app',"Brilliant. Then you'll already see your booking there. Do check that the details match what we've just done.",'Respects their answer. Record "Already has it".']]);
+RW('u8',[
+['After seats','Use when: you have just added seats',"Your seats are reserved. When it's time to travel, you can check in and see your boarding pass on the free TUI app.",'Links the extra to a real app benefit.'],
+['After bags','Use when: you have just added baggage',"That's added. The TUI app keeps your booking and baggage details in one place, so there are no surprises at the airport.",'Reassures them about the airport.'],
+['After meals','Use when: you have just added meals',"Your meals are booked. You'll see them in the TUI app together with your flight times.",'One place for everything.'],
+['After transfer or hotel','Use when: you have just added a transfer or hotel extra',"That's sorted. The TUI app will keep your hotel and transfer details with you on the day.",'Nothing to look up on arrival.'],
+['Any time, any place','Use when: any call, if you have not mentioned the app yet',"The free TUI app lets you manage your booking from anywhere, even at the airport. Would you like me to tell you how to download it?",'A soft question that gets a yes or no.'],
+['Help them download','Use when: they say yes',"It's quick. Search for TUI in your app store, and I'll stay on the line while you find it.",'Turns interest into action.']]);
+/* ---- closing: confirm back what was agreed ---- */
+RW('c2',[
+['Standard close','Use when: any call',"Is there anything else I can help you with today? Just to make you aware, you'll receive an updated email confirmation within the next 24 hours.",'Covers the expectations check.'],
+['Recap actions','Use when: you changed or added something',"To recap, I've [action], and you'll receive an email within [24 hours]. Is that okay?",'Clear next steps prevent follow-up calls.'],
+['Next step with a time','Use when: you promised to do something later',"So I'll [action] by [time], and you'll hear from us by [email/phone]. Is that okay with you?",'A time and channel stop chasing calls.'],
+['After a difficult call','Use when: the customer was upset',"Thank you for your patience today, and I'm sorry again for the trouble. I've noted everything on your account, and if you need anything else, please quote [reference].",'Ends steady and respectful.'],
+['After saying no','Use when: you could not give them what they wanted',"I know that wasn't the answer you were hoping for. What we've agreed is [recap], and I've noted everything on your booking.",'Recaps what you did do.']]);
+RW('c1',[
+['Standard','Use when: any call',"Is there anything else I can help you with today?",'Open, simple and expected.'],
+['Warm','Use when: the call went well',"Thank you for choosing TUI. It's been a pleasure helping you, and I hope you have a wonderful holiday!",'A personal finish leaves a good impression.'],
+['Quick','Use when: the customer is in a hurry',"All done. Anything else I can help with?",'Respects their time.'],
+['Before the trip','Use when: they travel soon',"Not long to go now! Have a fantastic trip.",'Ends on a happy picture.'],
+['Check understanding','Use when: the call was complicated',"Would you like me to go over the main points one more time?",'Catches confusion before they hang up.']]);
+RW('n3',[
+['Ask the cost','Customer says: "How much to cancel?"',"Let me check. It depends on how many days there are before you travel. May I confirm your departure date and the total price, so I can give you the exact figure?",'You need facts before quoting a cost.'],
+['Try to save it','Use when: they have just said they want to cancel',"Before I go ahead, may I ask what's changed? There may be options, like moving the dates, that could work. If not, I'll explain exactly what cancelling involves.",'One honest attempt to keep the booking (save-the-sale check).'],
+['Deposit','Customer says: "Why do I lose my deposit?"',"I understand it's frustrating. Your deposit is non-refundable under the booking terms. Would you like me to check whether changing the dates suits you better?",'Calm and factual, then a way forward.'],
+['Compare costs','Customer says: "Can I move the dates instead?"',"Let me check. A change can also have a fee, so I'll compare it with the cancellation charge and give you both figures.",'They decide with both numbers.'],
+['Insurance','Customer says: "Will my insurance cover it?"',"I'm not able to confirm what your policy covers, but it's worth checking. Your policy documents will show what's included, and I'll note on your booking that you're looking into it.",'Never confirm cover.'],
+['Respect the decision','Use when: they still want to cancel',"I understand, and I'll process that for you now. I'm sorry we couldn't keep you.",'A kind finish keeps goodwill.']]);
+
+(function(){const U=['Use when: any call','Use when: a morning call and you want a slightly formal start','Use when: the customer sounds friendly','Use when: the queue was long, or they say "finally"','Use when: the customer sounds unsure or nervous','Use when: the customer sounds rushed'];MID('o1').w.forEach((w,i)=>{w.u=U[i]});})();
+/* ================= ATCOM: how to do it, security cases, system guide ================= */
+const ST={inc:'Tick the accommodation box and go to Menu > Amend Inclusive.',acc:'Tick the accommodation box and go to Menu > Amend Accommodation.',upd:'Update the number of passengers and rooms if needed (you can choose "any room") and click Search.',same:'Make sure the flight is the same and click Proceed.',room:'Choose room type and quantity based on room occupancy.',fx:'Add Flight Extras if they already exist or if the customer wishes to add any.',sv:'Add Services if they already exist or if the customer wishes to add any.',care:'TUI Care Foundation: make sure it is on all passengers, old and new ("Modify Item" to edit it).',flt:'Choose the desired flight.',any:'Use the "any room" option to see all available rooms.',sum:'Expand the Booking summary to match the flight and the accommodation.'};
+const END=[['Read errata if needed.','errata'],['Full read back.','rb'],['Save and put your memo.','memo']];
+const confirmQ=(x)=>`So you'd like ${x}, is that right?`;
+const PROCS=[
+/* ---- change ---- */
+{id:'chg-date',g:'Change',n:'Change the date',int:['amend','problem'],when:'I need to change the dates.',say:confirmQ('to change your travel dates')+" I'll check the price difference first, is that okay?",ask:[['New dates','What new dates are you looking to travel?'],['Flexibility','How flexible are you with the dates? Could you travel a few days either side?'],['Reason','Is there a specific reason you need to change the dates?']],steps:[ST.inc,'Change the date to the desired date. '+ST.any,ST.sum,ST.fx,ST.sv,'TUI Care Foundation: make sure it is on the new date ("Modify Item" to edit it).'],act:'Changed travel date',reason:'Customer requested date change from [old date] to [new date]. Price difference £[X] explained and accepted.'},
+{id:'chg-dur',g:'Change',n:'Change the duration',int:['amend'],when:'I want to extend my holiday.',say:confirmQ('to change the length of your stay')+" Let me check what's available.",ask:[['Nights','How many nights would you like to extend or reduce your stay by?'],['Earlier or later','Would you prefer to arrive earlier or depart later?'],['Flexibility','Are you flexible with the new duration if your preferred option is not available?']],steps:[ST.inc,'Change the date and duration to the desired ones. '+ST.any,ST.flt,ST.room,ST.fx,ST.sv],act:'Changed duration',reason:'Customer requested duration change from [X] to [X] nights. Price difference £[X] explained and accepted.'},
+{id:'chg-dest',g:'Change',n:'Change destination or hotel',int:['amend','problem'],when:'I want to move to a different hotel.',say:confirmQ('to change your hotel')+" I'll check availability and the price for you.",ask:[['Reason','What is prompting this change?'],['Ideal outcome','What would be your ideal outcome?'],['Second choice','If your first choice is not available, what would be your second preference?']],steps:[ST.inc,'Change the destination and hotel to the desired ones. Delete any promotional codes and save them in a note to check applicability later.',ST.flt,ST.room,ST.fx,ST.sv],act:'Changed destination or hotel',reason:'Customer requested change from [old] to [new]. Promo codes noted to check later.'},
+{id:'chg-room',g:'Change',n:'Change room type',int:['amend','hotel'],when:'I need to change my room.',say:confirmQ('to change your room type')+" Let me check what's available.",ask:[['Current room','What type of room are you currently booked in?'],['New room','What room type would you prefer?'],['Why','Is this change due to a change in your party size or specific requirements?'],['Requirements','Do you have any specific room requirements we should be aware of?']],steps:[ST.acc,ST.room,ST.sv],act:'Changed room type',reason:'Customer requested room change from [old] to [new]. Price difference £[X].'},
+{id:'chg-board',g:'Change',n:'Change board basis',int:['amend','hotel'],when:'I want to upgrade to half board.',say:confirmQ('to change your board basis')+" I'll check the price difference.",ask:[['Which board','Which board basis would you like: bed and breakfast, half board or all inclusive?']],steps:['Tick the accommodation box, go to Menu > Modify Board.','Expand the Booking summary to match the room, but change the Board Basis.'],act:'Changed board basis',reason:'Customer changed board basis from [old] to [new]. Price difference £[X].'},
+{id:'room-assign',g:'Change',n:'Change room assignment',int:['amend','hotel'],when:'We want to swap who stays in which room.',say:confirmQ('to move people between rooms')+" As long as the numbers of adults and children stay the same, the price should not change.",ask:[],steps:['Tick the accommodation box, go to Service and select Assign.','Re-assign the passengers to the rooms. As long as you do not change the number of adults and children, the price should not change.'],act:'Changed room assignment',reason:'Re-assigned passengers between rooms. No price change.'},
+{id:'chg-name',g:'Change',n:'Change a name',int:['amend'],when:'There is a mistake on the name.',say:confirmQ('to correct a name on the booking')+" Could you spell the correct name for me, exactly as it is on the passport?",ask:[['Spelling','Could you spell the name exactly as it appears on the passport?']],steps:['Scroll down to the passenger box and click Modify.','Change whatever needs to be changed (first name, surname, gender, title). All information must match the passport.',ST.fx],note:'If a name is changed you MUST add a booking memo. Date of birth is required for the lead passenger and all children.',act:'Corrected passenger name',reason:'Corrected passenger name from [old] to [new] as per passport. Customer confirmed spelling.'},
+{id:'chg-lead',g:'Change',n:'Change the lead passenger',int:['amend'],when:'The lead passenger needs to be someone else.',say:confirmQ('to change the lead passenger')+" I'll need the current lead and the new lead to confirm they are both happy with this.",ask:[['Both leads','Are both the current and the new lead passenger available to confirm?']],steps:['Scroll down to the passenger box and click Modify.','Select the Lead Pax circle on the new lead passenger.','Change the contact information to match the new lead and save.'],note:'Both the old and the new lead must confirm that everyone is okay with the change.',act:'Changed lead passenger',reason:'Lead passenger changed from [old] to [new]. Both leads confirmed.'},
+{id:'infant-seat',g:'Change',n:'Infant to have a seat',int:['amend'],when:'The baby needs their own seat.',say:confirmQ('your infant to have their own seat')+" I'll check the price first.",ask:[['Price first','Shall I check how much a seat would cost before we change anything?']],steps:['Before amending, check how much a child seat is on the same flight at the same time, in a separate Atcom tab.','If they wish to proceed, continue.','Tick the Flight service box, go to Menu > Amend Transport Pair.','Change Infant to Child (age 2).',ST.sum,ST.fx,ST.sv],act:'Changed infant to child seat',reason:'Infant changed to child seat. Price £[X] explained and accepted.'},
+/* ---- add ---- */
+{id:'add-pax',g:'Add',n:'Add a passenger',int:['amend'],when:'I want to add someone to the booking.',say:confirmQ('to add another traveller')+" I'll need their details exactly as on the passport.",ask:[['Details','Could I take their title, full name and date of birth, exactly as on the passport?']],steps:[ST.inc,ST.upd,ST.same,ST.room,'Add the passenger details.',ST.fx,ST.sv,ST.care],act:'Added passenger',reason:'Added passenger [name]. Price £[X] explained and accepted.'},
+{id:'add-infant',g:'Add',n:'Add an infant (no seat)',int:['amend'],when:'We have had a baby.',say:confirmQ('to add an infant without a seat')+" Could I take their date of birth?",ask:[['Details','May I take the infant\'s full name and date of birth?']],steps:[ST.inc,ST.upd,ST.same,'Choose room type and quantity based on room occupancy. Make sure it allows infants.','Add the infant details.',ST.fx,ST.sv],act:'Added infant',reason:'Added infant [name]. No seat.'},
+{id:'add-room',g:'Add',n:'Add a room',int:['amend','hotel'],when:'We need another room.',say:confirmQ('to add another room')+" Let me check availability.",ask:[['Who','Who will be staying in the extra room?']],steps:[ST.acc,'Update the rooms and number of passengers if needed (you can choose "any room") and click Search.',ST.room,ST.sv],act:'Added room',reason:'Added [room type] for [names]. Price £[X].'},
+{id:'flt-extras',g:'Add',n:'Add baggage, meals or seats',int:['extras'],when:'I want to add a bag.',say:confirmQ('to add extras to your flight')+" Let me check what's available.",ask:[['Which','Which would you like: baggage, meals or seats?'],['Both flights','Would you like that on both flights, or just one way?']],steps:['Tick the Flight box and go to Menu > Flight Extras.','Add whatever the customer needs if available. If it is not there, it is not available.'],act:'Added flight extras',reason:'Added [extra] for [names]. £[X].'},
+{id:'late-co',g:'Add',n:'Late check-out room or private taxi',int:['hotel','extras'],when:'Can we have a late check-out?',say:confirmQ('to add a late check-out or a taxi')+" Let me check if it's available.",ask:[],steps:['Tick the accommodation box, go to Menu > Add Item to Accommodation.','Add whatever the customer needs if available. If it is not there, it is not available.'],act:'Added late check-out or taxi',reason:'Added [item]. £[X].'},
+{id:'discount',g:'Add',n:'Add a discount code',int:['pay','other'],when:'I have a promo code.',say:confirmQ('to use a promo code')+" I'll check that it applies to your booking.",ask:[['Code','Could you read me the code?']],steps:['Click the 3 dots on the bottom right and select Promotional Offer.','Type the code and select Update.'],act:'Applied promo code',reason:'Applied promo code [code]. Discount £[X].'},
+{id:'airport',g:'Add',n:'Airport hotel and parking',int:['extras'],when:'Can I add parking?',say:confirmQ('to add airport parking or an airport hotel')+" Let me look at the options.",ask:[['Which','Is it parking only, or a hotel and parking?']],steps:['Under the booking reference at the top left, hover over "Itinerary" and choose "Airport ancillary".','Choose Parking, or Hotel and Parking, and click Search.','Choose what suits the customer, tick the selection circle and click Proceed.'],act:'Added airport parking or hotel',reason:'Added [parking / hotel and parking]. £[X].'},
+/* ---- remove / cancel / authorise ---- */
+{id:'rem-pax',g:'Remove',n:'Remove a passenger',int:['amend','cancel'],when:'One of us cannot travel any more.',say:confirmQ('to remove a passenger from the booking')+" I'll check the price and any fees first.",ask:[['Reason','May I ask what has changed? There may be other options.']],steps:[ST.inc,'Update the rooms and number of passengers (you can choose "any room") and click Search.',ST.room,'Untick the passenger who is not going and click Proceed.',ST.fx,ST.sv,'TUI Care Foundation: make sure it is NOT on the removed passenger ("Modify Item" to edit it).'],act:'Removed passenger',reason:'Removed passenger [name]. Fees £[X] explained.'},
+{id:'rem-lead',g:'Remove',n:'Remove the lead passenger',int:['amend','cancel'],when:'The lead passenger cannot travel any more.',say:confirmQ('to remove the lead passenger')+" I'll need the old and the new lead to confirm.",ask:[],steps:['Do the "Remove a passenger" steps.','Do the "Change the lead passenger" steps.'],note:'Both the old and the new lead must confirm that everyone is okay with the change.',act:'Removed lead passenger',reason:'Removed lead [old], new lead [new]. Both confirmed.'},
+{id:'rem-svc',g:'Remove',n:'Remove a taxi, late check-out or service',int:['hotel','extras'],when:'I do not need the taxi any more.',say:confirmQ('to remove that from your booking')+" I'll check whether a refund applies.",ask:[],steps:['Tick the Service box, go to Menu > Remove Item.'],act:'Removed service',reason:'Removed [item]. Refund £[X] if applicable.'},
+{id:'cancel',g:'Cancel and authorise',n:'Cancel a holiday',int:['cancel'],when:'I want to cancel.',say:"I'm sorry to hear that. So you'd like to cancel the whole booking, is that right? May I ask what's prompted it? There may be options that work better.",ask:[['Reason','May I ask what\'s prompted the cancellation? It may be an "Exceptions" case.'],['Alternatives','Before we go ahead, let me show you some alternatives that might work better for you.']],steps:['Ask for the reason: it might be an "Exceptions" case.','The customer must have paid all the deposits before cancellation.','On the bottom right corner, click Cancel (cancellation fees apply if needed).','Send confirmation.','If the unpaid balance is negative (-ve), process a refund.','Save and put your memo.'],noend:true,act:'Cancelled booking',reason:'Customer cancelled because [reason]. Alternatives offered. Fees £[X] explained. Refund £[X] if due.'},
+{id:'nla',g:'Cancel and authorise',n:'Non-lead authorisation',int:['other','amend'],when:'I am calling for my wife.',say:"I can add you as authorised on this booking. The lead passenger needs to call us to give that permission. Is [Name] with you now?",ask:[['Lead on the line','Is the lead passenger able to call us, or to join this call?']],steps:['Add a memo with code NLA / NLDA, then write the name of the passenger and what they are authorised to do.'],note:'The lead passenger must call us to give the authorisation.',act:'Added non-lead authorisation',reason:'Lead passenger [name] authorised [name] to [what they can do].',code:'NLA / NLDA'},
+/* ---- payments ---- */
+{id:'pay-int',g:'Payments',n:'Take a card payment (integrated)',int:['pay'],when:'I want to pay my balance.',say:confirmQ('to pay the balance today')+" I'll pause the recording while I take your card details.",ask:[['Amount','Would you like to pay the full balance, or the next payment?']],steps:['Check the booking details and confirm the customer information.','Expand the price box and check the balance unpaid.','Choose the payment method: Next Payment, Pay All, or Other.','PAUSE the call recording, then enter the card details.','Read the terms and conditions.','Click Pay Now.'],note:'Integrated payments take real money from the customer\'s card.',act:'Took payment',reason:'Took payment £[X] by card. Balance now £[X].',noend:true,after:['Restart the recording.','Add a booking memo after a successful payment.']},
+{id:'pay-link',g:'Payments',n:'Pay by link',int:['pay'],when:'I would rather pay on my own device.',say:"I can send you a secure payment link by email. You'll complete the payment on your own device while we're on the call. Is [email] the best address?",ask:[['Stay on the line','Please stay on the line until the payment is complete. Is that okay?']],steps:['Go to the integrated payment page (it defaults to Pay by Link) and choose the payment amount.','Read the script to the customer about receiving a secure payment link.','Select the email branding (TUI, First Choice, Marella, Crystal Ski).','Enter the customer\'s email address and click Send.','Stay on the Atcom payment page until the payment is completed.','The customer gets an email from payment.link@payments.tui.com and pays while on the call.'],note:'Higher fraud prevention. Processes as e-commerce, not MOTO. You can accept bookings for customers travelling within 14 days, and take payment from customers who are not on the booking.',act:'Sent pay by link',reason:'Pay by link sent to [email] for £[X]. Payment completed on the call.',noend:true,after:['Add a booking memo after a successful payment.']},
+{id:'pay-non',g:'Payments',n:'Move money between bookings (non-integrated)',int:['pay'],when:'(Internal: cancel and rebook, reinstate within 24 hours, part transfer)',say:'',ask:[],steps:['Log into Atcom, enter the booking reference and click Recall.','Check the customer details to make sure it is the correct booking.','DIRECT CUSTOMERS ONLY: select Payments (Tour and Agents follow their own process).','Select the payment type and adjust if necessary.','Enter the payment amount and card information.','A manager or another agent must authorise by entering their username and password.','Check the Payment Overview and Booking Overview pages.','Click Save and add a memo to the booking.'],note:'No money is taken or refunded. Use for: amending a continued room or repackage (cancel and rebook), reinstating a cancelled booking within 24 hours, part transfers, duplicate bookings from cancel and rebook within 24 hours. If the card has expired, change the expiry date to the next month and leave full notes with the original expiry date. Direct Debit non-integrated payments or refunds go to the Finance team: Financialcontrolteam1@tui.co.uk.',act:'Non-integrated payment',reason:'Moved £[X] from booking [ref] to [ref]. Authorised by [name].',noend:true},
+{id:'refund',g:'Payments',n:'Refund timing rules',int:['pay','cancel'],when:'Where is my refund?',say:"I'm sorry, refunds can't be processed on the same day a payment was taken. Payments must be on the system for at least 24 hours. Could you call back tomorrow, or would you like me to arrange a callback?",ask:[],steps:['You cannot process a refund on the same day the payment was taken.','All payments must be on the system for at least 24 hours.','Ask the customer to call back the next day, or arrange a callback.'],act:'Explained refund timing',reason:'Refund cannot be processed same day. Callback arranged for [date].',noend:true},
+/* ---- system ---- */
+{id:'recall',g:'System',n:'Recall a booking',int:[],when:'',say:'',ask:[],steps:['Log into Atcom.','Hover over the Booking tab and select Recall.','Enter the booking reference in the field.','Click RECALL. The booking overview page appears.'],note:'Do not use "Make a Booking": it does not ask for the ABTA number, so the booking has to be cancelled and re-booked.',noend:true},
+{id:'queue',g:'System',n:'Queue a booking (SEATUP)',int:[],when:'',say:'',ask:[],steps:['Recall the booking.','Press Shift + F8.','Select the queue from the dropdown (for example SEATUP).','Enter your initials in the Comments field.','Click Send.'],note:'Use SEATUP when you select seats in SkySpeed instead of Atcom, so the seat numbers are written back to Atcom.',noend:true},
+{id:'apexx',g:'System',n:'Find a payment in Apexx',int:[],when:'',say:'',ask:[],steps:['Note the Merchant Reference from Atcom.','Open Atcom, select the Booking dropdown and choose Booking Locate.','In the Profile tab, type "Apexx".','Tick the search criteria you need: Depart Dates, Accommodation Dates, Origin Dates Between.'],note:'The rest of this process was cut off in your notes.',noend:true},
+{id:'error',g:'System',n:'Pull up an error',int:[],when:'',say:'',ask:[],steps:['Log into Atcom and hover over Maintenance.','Click System, hover over Job and select Back Office Actions.','Change the Action dropdown to "Navitaire" and the Exclude dropdown to "Select".','Type the booking reference in the Reference box and click Select.'],note:'You will see the error code (for example "SSR request failed"), the message, and the record number and status.',noend:true},
+{id:'stock',g:'System',n:'Check flight stock',int:[],when:'',say:'',ask:[],steps:['Click Maintenance, then Stock.','Highlight Selling, then click Selling Transport.','Enter the transport code: [international code][UK code][day][letter]. Example: MRULGW7/A (MRU = Mauritius, LGW = Gatwick, 7 = Sunday, A = time slot).','Select the day of departure and click Search.'],note:'You will see flight numbers, aircraft types, seat availability by class and passenger load. For accommodation use Selling > Selling Accommodation.',noend:true},
+{id:'manifest',g:'System',n:'Pull a manifest',int:[],when:'',say:'',ask:[],steps:['Go to the Booking tab and select Transport Locate.','Click the blue arrow on the Transport Locate screen.','Click New.'],note:'The rest of this process was cut off in your notes.',noend:true}
+];
+const PG=['Change','Add','Remove','Cancel and authorise','Payments','System'];
+const PID=id=>PROCS.find(p=>p.id===id);
+const procSteps=p=>p.noend?p.steps.concat(p.after||[]):p.steps.concat(END.map(x=>x[0]));
+function psOn(id,i){return !!(S.ps&&S.ps[id]&&S.ps[id][i])}
+function procHTML(p,o={}){const st=procSteps(p),done=st.filter((s,i)=>psOn(p.id,i)).length;
+ return `<article class="proc card rise${o.open?' open':''}" id="${o.pre||'pr-'}${p.id}" data-proc="${p.id}" style="--i:${o.i||0}"><button type="button" class="ph" data-ptog="${p.id}"><span class="tg">${esc(p.g)}</span><b>${esc(p.n)}</b><span class="pc">${done}/${st.length}</span>${ic('chev').replace('class="ic"','class="ic ch"')}</button>
+ <div class="pb"><div>${p.when?`<p class="cu">Customer says: "${esc(p.when)}"</p>`:''}
+ ${p.say?`<div class="pgroup"><span class="tg">Confirm what they said</span>${sb(p.say,{tag:'Confirm',tip:'You confirm first, so you never guess.'})}</div>`:''}
+ ${p.ask&&p.ask.length?`<div class="pgroup"><span class="tg">Ask first</span>${p.ask.map((a,k)=>sb(a[1],{tag:a[0],i:k})).join('')}</div>`:''}
+ <div class="pgroup"><span class="tg">Steps in Atcom</span><ol class="psteps">${st.map((s,i)=>`<li class="${psOn(p.id,i)?'done':''}"><label><input type="checkbox" data-pstep="${p.id}:${i}"${psOn(p.id,i)?' checked':''}><span>${esc(s)}</span></label></li>`).join('')}</ol></div>
+ ${p.note?`<p class="pnote">${esc(p.note)}</p>`:''}
+ ${p.act?`<div class="row" style="margin-top:8px"><button type="button" class="btn" data-pmemo="${p.id}">${ic('file')}Add to memo</button><span class="tip">Fills the action, the memo code and the reason. Check the [brackets] before you copy.</span></div>`:''}</div></div></article>`}
+const procMemo=id=>{const p=PID(id);if(!p||!p.act)return;
+ N.action=N.action.trim()?N.action.trim().replace(/[.;]$/,'')+'; '+p.act.toLowerCase():p.act;
+ N.memo=p.code||N.memo||'BO / BEM';if(!N.creason.trim())N.creason=p.reason;else if(!N.creason.includes(p.reason))N.creason=N.creason.trim()+' '+p.reason;
+ saveN();syncNotes();toast('Added to the memo')};
+function procToggle(id,i,v){S.ps=S.ps||{};S.ps[id]=S.ps[id]||[];S.ps[id][i]=v;
+ const p=PID(id),st=procSteps(p);
+ if(p&&!p.noend&&i>=p.steps.length){const k=END[i-p.steps.length][1];if(k==='rb'&&v){N.rb='Y';saveN();syncNotes()}}
+ if(p&&p.noend&&p.after&&p.after.length){/* nothing extra */}
+ saveS()}
+/* ---- security check guide ---- */
+const VQ={name:["Could I take your full name, please?","full name"],lname:["Can I confirm the lead passenger's full name?","lead passenger's full name"],ref:["May I take the booking reference, please?","booking reference"],dep:["What is your departure date, including the day, month and year?","departure date"],dob:["Can you confirm the lead passenger's date of birth?","lead passenger's date of birth"],abta:["Could you confirm your ABTA number, please?","ABTA number"],auth:["Are you the lead passenger on this booking? Who am I speaking to today?","authorisation on the booking"],rec:["Just so you know, this call is recorded for training and quality purposes.","call recording mention"],lead:["Am I speaking to [lead passenger's name]?","you are speaking to the lead passenger"],refsay:["I'm calling about booking reference [reference].","booking reference said"]};
+const VCASES={
+'in-cust-green':{n:'Inbound customer: green',items:['name']},
+'in-cust-red':{n:'Inbound customer: red',items:['ref','dep','name']},
+'in-ret-green':{n:'Inbound retail store: green',items:['abta']},
+'in-ret-red':{n:'Inbound retail store: red',items:['ref','dep','abta']},
+'out-cust':{n:'Outbound to a customer',items:['lead','dep','rec']},
+'out-ret':{n:'Outbound to a retail store',items:['refsay','lname','abta','rec']},
+'out-3p':{n:'Outbound to a 3P agent',items:['refsay','lname','dep','abta','dob','rec']}};
+const vcase=()=>{if(S.dir==='out')return S.vwho==='ret'?'out-ret':S.vwho==='3p'?'out-3p':'out-cust';return 'in-'+(S.vwho==='ret'?'ret':'cust')+'-'+(S.vcol==='red'?'red':'green')};
+function verifyHTML(){const c=VCASES[vcase()],nl=S.dir!=='out'&&S.vnl,items=c.items.concat(nl?['auth','lname']:[]);S.vd=S.vd||{};
+ const all=items.every(k=>S.vd[k]);const done=S.vd.pass;
+ const chip=(k,v,t,on)=>`<button type="button" class="pill${on?' on':''}" data-${k}="${v}">${t}</button>`;
+ return `<section class="qcard vguide rise" style="--i:0"><header><div class="qt"><b>Security check: what to confirm</b><small>Pick the call type. Only the right checks appear.</small></div></header>
+ <div class="cw"><span class="fl">Who is it?</span><div class="chips">${chip('vwho','cust','Customer',S.vwho!=='ret'&&S.vwho!=='3p')}${chip('vwho','ret','Retail store',S.vwho==='ret')}${S.dir==='out'?chip('vwho','3p','3P agent',S.vwho==='3p'):''}</div></div>
+ ${S.dir!=='out'?`<div class="cw"><span class="fl">Call colour</span><div class="chips">${chip('vcol','green','Green',S.vcol!=='red')}${chip('vcol','red','Red',S.vcol==='red')}</div></div>
+ <div class="cw"><span class="fl">Is the caller a non-lead passenger?</span><div class="chips">${chip('vnl','1','Yes, non-lead',!!S.vnl)}${chip('vnl','0','No',!S.vnl)}</div></div>`:''}
+ <p class="vt"><b>${esc(c.n)}${nl?', non-lead':''}</b></p>
+ <ul class="vlist">${items.map(k=>`<li class="${S.vd[k]?'done':''}"><label><input type="checkbox" data-vk="${k}"${S.vd[k]?' checked':''}><span><b>${esc(VQ[k][1][0].toUpperCase()+VQ[k][1].slice(1))}</b></span></label>${sb(VQ[k][0],{tag:'Say'})}</li>`).join('')}</ul>
+ ${nl?`<p class="pnote">Non-lead: check they have authorisation and confirm the lead passenger's full name. If both apply, continue. If not, you can only take payments or answer general questions, and disclose nothing about the booking itself.</p>`:''}
+ <div class="row" style="margin-top:8px"><button type="button" class="btn pr" data-vpass="1"${all?'':' disabled'}>${done?'GDPR passed (saved)':'All confirmed: GDPR passed'}</button><button type="button" class="btn" data-vfail="1">Could not verify</button></div></section>`}
+function verifySet(pass){const who=S.dir==='out'?(S.vwho==='ret'?'Retail':S.vwho==='3p'?'Third party agent (3PA)':'Lead passenger'):(S.vwho==='ret'?'Retail':S.vnl?'Authorised non-lead':'Lead passenger');
+ N.gdpr=pass?'Yes':'No';if(pass)N.who=who;S.vd=S.vd||{};S.vd.pass=!!pass;saveS();saveN();syncNotes();renderCall();toast(pass?'GDPR passed saved to your notes':'Saved as not verified. Only payments and general questions.')}
+/* ---- system guide (reference) ---- */
+const SYS=[
+['Home page',['Top bar: TUI logo (back to home), Maintenance (stock, yield, settings), Booking (build and recall), Profile (your booking and shop agent codes), Menu Search (keywords and phrases).','Booking Recall: enter the booking reference to retrieve a booking.','Locate a Booking: search by other criteria such as passenger name or dates.','Make a Booking: DO NOT USE. It does not ask for the ABTA number and needs cancelling and re-booking.']],
+['Booking tab (after recall)',['Overview: reference, status, lead passenger, day of departure, outbound date, duration, promotion code, adults, children (with ages) and infants.','Itinerary: outbound and inbound dates, flight numbers, routes and times. Click the "+" next to the flight to see seats, meals (long-haul only) and baggage bought.','Passengers: title, name, age, ticket and seat numbers, meal preferences. Click Modify to update details. Date of birth is required for the lead passenger and all children. After a name change you MUST add a memo.','Pricing: total cost, payments received, taxes, fees and the outstanding balance.','Payments: method, amount, status (CAPTURED, PENDING), transaction ID, merchant reference and mandate ID (direct debits).']],
+['Service tab',['Shows each service and its export status: Exported (sent to the airline or supplier), Waiting (pending), Failed (needs attention: investigate the error).']],
+['Documentation tab',['Booking confirmations, e-tickets, invoices, manifests and attachments. Recall the booking, click Documentation, choose the document type, then view or download.']],
+['Queue tab',['Queues hold bookings that need specific processing: SEATUP (seat updates), processing, error and amendment queues.','To queue: recall the booking, press Shift + F8, choose the queue, add your initials in Comments, click Send.','To view a queue: Maintenance > System > Queue.']],
+['Menu tab (quick actions)',['Quick Service Memo, Amend Transport Pair (change flights), Remove or Add Passengers, View Transport, Flight Extras (baggage, meals, seats), Seat Selection (seat map).','Use it: recall the booking, click Menu, choose the action, complete it, save, and add a memo if needed.']],
+['Maintenance',['System: User Security, Job, Setup, Queue, Yield, General, Back Office, Utilities. Yield Adjust sets the basic selling cost of accommodation for groups.','Stock: Selling Transport (flight stock) and Selling Accommodation (availability).']]];
+function sysHTML(){return SYS.map((s,i)=>`<details class="card sysd rise" style="--i:${i}"><summary><b>${esc(s[0])}</b>${ic('chev').replace('class="ic"','class="ic ch"')}</summary><ul>${s[1].map(x=>`<li>${esc(x)}</li>`).join('')}</ul></details>`).join('')}
+/* ---- Atcom view ---- */
+function renderAtcom(){const g=S.pg||'Change';
+ $('#w-atcom').innerHTML=`<h1>Atcom</h1><p class="sub">Step-by-step for the system. Pick the job. Each one ends with the same checks: errata, full read back, save and memo.</p>
+ <div class="chips" id="pgs" style="margin-bottom:12px">${PG.map(x=>`<button class="pill${g===x?' on':''}" data-pg="${x}">${x}</button>`).join('')}<button class="pill${g==='Guide'?' on':''}" data-pg="Guide">System guide</button><button class="pill${g==='Memo'?' on':''}" data-pg="Memo">Memo guide</button></div>
+ <div id="atbody">${g==='Guide'?sysHTML():g==='Memo'?memoGuideHTML():`<div class="grid2">${PROCS.filter(p=>p.g===g).map((p,i)=>procHTML(p,{i,pre:'at-'})).join('')}</div>`}</div>`}
+/* ---- memo guide (CAR) ---- */
+const MEMOEX=[['Flight change','BO / BEM','0.00','Customer requested flight change from [old flight] to [new flight] on [date]. Changed outbound from [time] to [time]. Customer confirmed happy with new times. No additional charges applied.'],['Name correction','BO / BEM','0.00','Corrected passenger name from [old] to [new] as per passport. Customer confirmed spelling. Name change processed successfully.'],['Balance extension','BE / BEN','[amount]','Balance extension granted until [date]. [Reason]. Manager approval obtained. New payment date confirmed with customer.'],['Non-lead authorisation','NLA / NLDA','','Lead passenger [name] authorised [name] to [what they can do].']];
+function memoGuideHTML(){return `<div class="grid2"><div class="card"><h3>CAR: what goes in a memo</h3><p><b>C</b> = Code (the memo type)<br><b>A</b> = Amount (if applicable)<br><b>R</b> = Reason (the explanation)</p><p class="tip">Common codes: BO / BEM (standard booking memo, the most common), BE / BEN (balance extensions), NLA / NLDA (non-lead authorisations).</p><h3>Always add a memo after</h3><ul class="plain"><li>Every customer interaction</li><li>Completing a booking process</li><li>Empowerment gestures</li><li>Amendments, name changes and flight changes</li><li>Adding or removing services</li><li>Refunds and complaints</li></ul></div>
+ <div class="card"><h3>Do</h3><ul class="plain"><li>Be specific and detailed</li><li>Include dates and times</li><li>Document customer requests</li><li>Note any promises made</li><li>Record all changes made</li><li>Use the right code</li><li>Save straight after the action</li></ul><h3>Do not</h3><ul class="plain"><li>Leave vague descriptions</li><li>Forget to save</li><li>Use incorrect codes</li><li>Leave out important details</li><li>Delay adding the memo</li></ul></div></div>
+ <h2>Examples (tap to put one in your notes)</h2><div class="grid2">${MEMOEX.map((m,i)=>`<button type="button" class="card memoex" data-mex="${i}"><span class="tg">${esc(m[0])}</span><b>${esc(m[1])}${m[2]?' | £'+esc(m[2]):''}</b><span class="tip">${esc(m[3])}</span></button>`).join('')}</div>`}
+function memoExample(i){const m=MEMOEX[i];N.memo=m[1];N.amt=m[2]?'£'+m[2].replace('£',''):'';N.creason=m[3];saveN();syncNotes();toast('Example added to the memo. Check the [brackets].')}
+/* ---- handlers ---- */
+$('#w-atcom').addEventListener('click',e=>{const t=e.target,pg=t.closest('[data-pg]');if(pg){S.pg=pg.dataset.pg;saveS();renderAtcom();return}
+ if(atClickShared(e))return;
+ const mx=t.closest('[data-mex]');if(mx){memoExample(+mx.dataset.mex)}});
+$('#w-atcom').addEventListener('change',e=>{const c=e.target.closest('[data-pstep]');if(!c)return;const [id,i]=c.dataset.pstep.split(':');procToggle(id,+i,c.checked);const art=c.closest('.proc');c.closest('li').classList.toggle('done',c.checked);const p=PID(id),st=procSteps(p);art.querySelector('.pc').textContent=st.filter((s,k)=>psOn(id,k)).length+'/'+st.length});
+function goProc(id){const p=PID(id);if(!p)return;S.pg=p.g;saveS();renderAtcom();show('atcom');setTimeout(()=>{const el=document.getElementById('at-'+id);if(el){el.classList.add('open');pointAt('at-'+id,'Open this one')}},60)}
+
+/* ===== New lines from the Atcom / quality notes (deduped against what already exists) ===== */
+const addW=(id,rows)=>{const m=MID(id);rows.forEach(r=>m.w.push({m:r[0],u:r[1],t:r[2],b:r[3]||'',f:r[4]?r[4].split(','):[]}))};
+addW('o1',[['Holiday change','Use when: they are calling about changes to their holiday',"Hi [Customer Name], it's lovely to speak with you. I can see you're looking to make some changes to your holiday.",'Personal and calm. Tells them you already know why they called.']]);
+MOM.push({id:'o6',g:'open',t:'Outbound call opening',c:'You are calling them. Confirm who you are speaking to, and mention the recording.',w:[
+ {m:'Customer',u:'Use when: you call a customer',t:"Good morning, may I speak to [Mr/Ms Surname]? My name is [Name], calling from TUI Pre-Travel about your booking. Is now a good time for a quick chat?",b:'Asks permission and confirms identity before sharing anything.'},
+ {m:'Recording',u:'Use when: you have confirmed the lead passenger and the departure date',t:"Just so you know, this call is recorded for training and quality purposes.",b:'Required on outbound calls to customers, retail stores and 3P agents.'},
+ {m:'Callback request',u:'Use when: they asked for a callback',t:"Good morning, my name is [Name], calling from TUI Pre-Travel about your callback request. Is now a good time?",b:'Reminds them why you are calling.'},
+ {m:'Retail store',u:'Use when: you call a retail store',t:"Hello, this is [Name] from TUI Pre-Travel, calling about booking reference [reference].",b:'Starts with the booking reference. Then confirm the lead full name and the ABTA number.'},
+ {m:'3P agent',u:'Use when: you call a third-party agent',t:"Hello, this is [Name] from TUI Pre-Travel. I'm calling about booking reference [reference] for [lead passenger full name], departing on [date].",b:'You give the reference, name and date. They confirm the ABTA number and the lead date of birth.'}],rel:['v1']});
+MOM.push({id:'l1',g:'discover',t:'Show you are listening',c:'Let them finish. Then show you understood how they feel.',w:[
+ {m:'It matters to them',u:'Use when: they explain something important to them',t:"I understand. I can hear that's important to you.",b:'Shows empathy without interrupting.'},
+ {m:'That makes sense',u:'Use when: they give a reason for a request',t:"That makes sense.",b:'Short. Keeps them talking.'},
+ {m:'Their concern',u:'Use when: they sound worried',t:"I completely understand your concerns about [topic].",b:'Names the worry, so they feel heard.'},
+ {m:'Frustrated',u:'Use when: the customer is frustrated',t:"I can hear this is frustrating for you, and I'm here to help sort this out.",b:'A calm tone and ownership.',f:'angry,demanding'},
+ {m:'Excited',u:'Use when: the customer sounds excited about the trip',t:"That sounds like a great plan! I'd love to help make it even better.",b:'Matches their energy (genuine excitement check).',f:'easy'}],rel:['d2','a1']});
+MOM.push({id:'u9',g:'offer',t:'Ask for the sale',c:'Do not only mention an extra. Ask a clear question to close it.',w:[
+ {m:'Add it today',u:'Use when: you have introduced an extra and they sound positive',t:"Would you like me to add this for you today?",b:'A clear yes or no question closes the sale.'},
+ {m:'Add to the balance',u:'Use when: there is a cost and a balance still to pay',t:"Shall we get this saved and add the cost onto your final balance?",b:'Makes the cost feel easy to manage.'},
+ {m:'Secure it',u:'Use when: they say it sounds good',t:"This sounds perfect for you. Shall I go ahead and secure this for you now?",b:'Moves from interest to action.'},
+ {m:'Personalised',u:'Use when: you know what matters to them',t:"Given what you've told me, I think this would work really well for you. Shall I add it?",b:'Links the extra to what they said.'},
+ {m:'Current offer',u:'Use when: a promotion applies to their booking',t:"There's a current offer that applies to your booking: [offer]. Would you like me to apply it?",b:'Mentions relevant campaigns (sales quality check).'}],rel:['u1','u2']});
+MOM.push({id:'r5',g:'resolve',t:'Offering options',c:'Give choices, then ask which one.',w:[
+ {m:'Which option',u:'Use when: more than one option is available',t:"I can see [X options] available. Which of these would work best for you?",b:'Gives control back to them.'},
+ {m:'Second choice',u:'Use when: their first choice may not be available',t:"If your first choice isn't available, what would be your second preference?",b:'Saves a second call.'},
+ {m:'Check alternatives',u:'Use when: nothing fits yet',t:"Would you like me to check alternative dates, rooms or durations that might suit you?",b:'Keeps the booking alive.'},
+ {m:'Go through them',u:'Use when: you have found the options',t:"Let me look at the available options for you. Would you like me to go through them with you now?",b:'Asks before you read a long list.'}],rel:['r3']});
+MOM.push({id:'r6',g:'resolve',t:'Price difference before a change',c:'Say it before you press Save. No surprises.',w:[
+ {m:'Aware of cost',u:'Use when: any change that may cost more',t:"Are you aware there may be a cost difference for this change?",b:'Avoids a complaint later.'},
+ {m:'Check first',u:'Use when: they have not asked about the cost',t:"Would you like me to check the price difference before we proceed?",b:'They decide with the facts.'},
+ {m:'If more expensive',u:'Use when: the new option costs more',t:"If the new option is more expensive, would you still like to proceed?",b:'Gets agreement before you change anything.'}],rel:['r1']});
+MOM.push({id:'d6',g:'discover',t:'Options already sent, and what matters',c:'Use when the customer has received options from us.',w:[
+ {m:'Email options',u:'Use when: we emailed them options',t:"Have you had time to look through the options we emailed you? Would you like me to go through them today?",b:'Starts from where they are.'},
+ {m:'Most important',u:'Use when: they cannot decide',t:"What's most important to you for this holiday?",b:'An open question that shows what to offer.'},
+ {m:'Flight times',u:'Use when: flights are part of the change',t:"Would you prefer morning or afternoon flights?",b:'A closed question that narrows the choice.'}],rel:['d1']});
+MOM.push({id:'d7',g:'discover',t:'Check the booking before you change it',c:'Look at what is already on the booking, then ask.',w:[
+ {m:'Already contacted',u:'Use when: it sounds like a repeat contact',t:"Have you already contacted our Pre-Travel team about this?",b:'Avoids doing the same thing twice.'},
+ {m:'Letter received',u:'Use when: the change may come from us',t:"Have you received a letter about any changes to your booking?",b:'Finds out if we caused the change.'},
+ {m:'Check the notes',u:'Use when: you open the booking',t:"Let me check your booking notes for any previous amendments.",b:'Says what you are doing, so the pause feels useful.'},
+ {m:'Review the booking',u:'Use when: before you change anything',t:"Can I just review what's currently on your booking?",b:'Both of you start from the same facts.'},
+ {m:'Other changes',u:'Use when: you have found the first change',t:"Are there any other changes you'd like to make while we're looking at this?",b:'One call instead of two.'},
+ {m:'Together or one by one',u:'Use when: there is more than one change',t:"Would you like to make all these changes together, or shall we do them one at a time?",b:'Gives them control.'},
+ {m:'Online changes',u:'Use when: they mention seeing something different online',t:"Have you noticed any changes to your booking details online?",b:'Finds a holiday change quickly.'}],rel:['d2']});
+MOM.push({id:'d8',g:'discover',t:'When something went wrong',c:'A failed change, a repeat call or something urgent.',w:[
+ {m:'What they tried',u:'Use when: they say it did not work',t:"What did you do when you tried to make this change?",b:'Finds where it went wrong.'},
+ {m:'Last time',u:'Use when: they have called before',t:"What was the outcome when you contacted us previously?",b:'Shows you will read the history.'},
+ {m:'Urgent',u:'Use when: they sound pressed',t:"Is there a specific reason this needs urgent attention?",b:'Sets the right priority.'},
+ {m:'Circumstances',u:'Use when: it may be an exception',t:"Are there any extenuating circumstances I should be aware of?",b:'May unlock an exception.'},
+ {m:'Deadline',u:'Use when: timing matters',t:"When do you need this resolved by?",b:'Gives you a clear target.'}],rel:['d2']});
+MOM.push({id:'p5',g:'pay',t:'Pay by link: what to say',c:'The customer pays on their own device while you stay on the call.',w:[
+ {m:'Explain it',u:'Use when: you offer pay by link',t:"I can send you a secure payment link by email. You'll enter your card details on your own device, so I never see them.",b:'Reassures them about security.'},
+ {m:'Stay on the line',u:'Use when: you have sent the link',t:"Please stay on the line while you complete the payment, and I'll wait with you.",b:'The payment finishes on the call.'},
+ {m:'Where it comes from',u:'Use when: they cannot find the email',t:"The email comes from payment.link@payments.tui.com. It may be in your junk folder.",b:'Solves the most common problem.'},
+ {m:'Why it helps',u:'Use when: they hesitate',t:"It's a safer way to pay, and it works even if you're not the person on the booking.",b:'Real benefits: fraud prevention, and payment from a non-lead.'}],rel:['p2']});
+addW('n3',[['Show alternatives','Use when: they are about to cancel',"Before we proceed with the cancellation, let me show you some alternatives that might work better for you.",'Save-the-sale: alternatives first.'],
+['Rebooking incentive','Use when: a rebooking incentive applies',"I'd hate for you to lose your holiday. We have a rebooking incentive that could help. Let me explain how it works.",'Explain it clearly. Do not rush it.']]);
+addW('u1',[['They mention children','Use when: they say children are travelling',"I can see you're travelling with children. Would you like me to add extra legroom seats, so you have more space and comfort on the flight?",'Only because they mentioned it. Tied to their need.']]);
+addW('u5',[['Updates','Use when: the booking has changed or may change',"The app will notify you of any updates to your holiday, so you're always kept informed.",'Benefit: they hear about changes without calling.'],
+['Alternative hotels','Use when: a hotel change or cancellation is being discussed',"You can use the app to look at alternative hotels if you need to. It makes everything much easier.",'Benefit: helps them view alternatives.']]);
+addW('c3',[['Confirm the changes','Use when: before you press Save, after one or more changes',"Just to confirm, you'd like to change [summary of changes], is that correct? Are you happy to proceed with these changes?",'The final agreement. It also covers the full read back.'],
+['Effective date','Use when: the change has a start date',"When would you like these changes to take effect?",'Avoids a wrong date.'],
+['Terms','Use when: the amendment has terms or a fee',"Do you understand the terms and conditions for this amendment?",'Records that they understood.']]);
+RW('qamend',[
+['Reason','Use when: they say they want a change',"What's prompting this change?",'Finds the real need, so you offer the right option.'],
+['Which change','Use when: the request is vague',"Is it the dates, the duration or the room you'd like to change?",'A closed question that narrows it.'],
+['Ideal outcome','Use when: you can offer more than one option',"What would be your ideal outcome?",'Aims the call at their goal.'],
+['Notification','Use when: the change may come from us',"Have you received any notification from us about changes to your booking?",'Finds out if we caused it.'],
+['Flexibility','Use when: the first choice may not be available',"Are you flexible if your preferred option isn't available?",'Prepares a second choice.']]);
+/* ensure every intent has a Verify path and steps link */
+const INTPROC=id=>PROCS.filter(p=>(p.int||[]).includes(id));
+
+function atcomCardHTML(){const it=S.intent,sug=it?INTPROC(it):[],cur=S.pcur&&PID(S.pcur)?S.pcur:(sug[0]?sug[0].id:'');
+ return `<section class="qcard rise" style="--i:0"><header><div class="qt"><b>Do it in Atcom</b><small>${it?'Suggested for '+esc(INT(it).n)+'. ':''}Pick the job and follow the steps. Every job ends with errata, full read back, save and memo.</small></div></header>
+ <div class="chips" style="margin:8px 0">${sug.map(p=>`<button type="button" class="pill${p.id===cur?' on':''}" data-pcur="${p.id}">${esc(p.n)}</button>`).join('')}<button type="button" class="pill" data-allat="1">All Atcom jobs</button></div>
+ ${cur?procHTML(PID(cur),{open:true,pre:'cp-'}):'<p class="tip">Pick the menu choice above to see suggested jobs, or open all Atcom jobs.</p>'}</section>`}
+const stSt=k=>S.cs.done[k]?'done':S.cs.skip[k]?'skip':'';
+const vis=m=>!m.intent||m.intent===S.intent;
+const stepMoms=k=>MOM.filter(m=>m.g===k&&vis(m)).sort((a,b)=>(!!b.intent-!!a.intent));
+function callIdx(){return Math.max(0,Math.min(STEPS.length-1,S.cstep|0))}
+function renderCall(){
+ const idx=callIdx(),st=STEPS[idx],it=S.intent?INT(S.intent):null,sc=S.scn>=0&&SCEN[S.scn];
+ const doneN=STEPS.filter(s=>S.cs.done[s[0]]).length,skipN=STEPS.filter(s=>S.cs.skip[s[0]]).length;
+ const fin=S.cfin;
+ const map=`<div class="cmap">${STEPS.map((s,i)=>{const z=stSt(s[0]);return `<button class="cn${i===idx&&!fin?' cur':''}${z?' '+z:''}" data-cs="${i}"><span class="cb">${z==='done'?ic('check'):z==='skip'?'&ndash;':i+1}</span><b>${s[1]}</b><small>${z==='skip'?'Skipped':z==='done'?'Done':esc(s[2].split('.')[0])}</small></button>`}).join('<span class="cl"></span>')}</div>`;
+ const head=`<div class="chead"><div class="row top2"><h1>Call</h1><label class="nm"><span>Your name</span><input type="text" id="cname" value="${esc(S.agent||'')}" placeholder="e.g. Ahmed" autocomplete="off"></label><span style="flex:1"></span><button class="btn" id="cscn">${ic('list')}Practice scenario</button><button class="btn" id="cnew">New call</button></div>
+  <div class="cw"><span class="fl">Call type</span><div class="chips"><button type="button" class="pill${S.dir!=='out'?' on':''}" data-dir="in">Inbound</button><button type="button" class="pill${S.dir==='out'?' on':''}" data-dir="out">Outbound</button></div></div>
+  <div class="cw"><span class="fl">${S.dir==='out'?'Reason for your call':'What did the customer choose on the menu?'}</span><div class="chips" id="cint">${INTENTS.map(x=>`<button type="button" class="pill${S.intent===x.id?' on':''}" data-int="${x.id}">${esc(x.n)}</button>`).join('')}</div></div>
+  <div class="cw"><span class="fl">Customer type</span><div class="chips" id="cty">${TYPES.filter(t=>t.id!=='all').map(t=>`<button type="button" class="pill${S.type===t.id?' on':''}" data-cty="${t.id}">${esc(t.n.split(' /')[0])}</button>`).join('')}</div></div>
+  </div>
+  ${sc?`<div class="card scn rise"><div class="tg">Scenario - ${sc[4]==='hard'?'hard':sc[4]==='med'?'medium':'easy'}</div><h3>${esc(sc[0])}</h3><p><b>Customer:</b> ${esc(sc[1])}<br><b>Situation:</b> ${esc(sc[2])}<br><b>Your goal:</b> ${esc(sc[3])}</p><button class="btn" id="cscx">Close scenario</button></div>`:''}`;
+ const body=callBody(fin,idx,st,it,doneN,skipN);
+ return callPaint(head,map,body,fin,idx);
+}
+function callBody(fin,idx,st,it,doneN,skipN){let body;
+ if(fin){body=`<div class="card cfin rise"><h2 style="margin-top:0">Call finished</h2><p class="tip">${doneN} steps done, ${skipN} skipped. Quality: <b>${QC.filter((q,i)=>qcOn(i)).length}/${QC.length}</b>. Copy the memo, then start the next call.</p>
+  <div class="checks" id="rub"><div class="fl">Self-score (optional)</div>${RUBRIC.map((r,i)=>`<label><input type="checkbox" data-rub="${i}"${S.rub[i]?' checked':''}><span>${esc(r)}</span></label>`).join('')}</div>
+  <div class="row" style="margin-top:12px"><button class="btn pr" id="ccopy">${ic('copy')}Copy memo</button><button class="btn" id="cnew2">New call</button></div></div>`}
+ else{const qs=STEPQC[st[0]],left=qLeft(st[0]),shown=[].concat(...qs.map(q=>qcMoms(q).filter(Boolean)));
+ body=`<div class="cstep"><div class="ch"><span class="tg">Step ${idx+1} of ${STEPS.length}</span><p class="tip">${esc(st[2])}${it&&st[0]==='open'?' They chose <b>'+esc(it.n)+'</b>, so say it back.':''}${!it&&(st[0]==='open'||st[0]==='discover')?' Pick the menu choice above and the lines will fit it.':''} <b class="qleft${left?'':' ok'}">${qLeftTxt(left)}</b></p></div>${st[0]==='verify'?verifyHTML():''}${st[0]==='resolve'?atcomCardHTML():''}${qs.map((q,n)=>qcCardHTML(q,n+1)).join('')}${stepMore(st[0],shown)}</div>`}
+ return body}
+function callPaint(head,map,body,fin,idx){
+ $('#w-call').innerHTML=`${head}${map}<div class="cgrid"><div class="cmain" id="cmain">${body}</div><div class="cside" id="cside"></div></div>
+ ${fin?'':`<div class="cbar"><button class="btn" id="cback"${idx===0?' disabled':''}>Back</button><button class="btn" id="cskip">Skip this step</button><button class="btn pr" id="cdone">${idx===STEPS.length-1?'Done: finish call':'Done, next: '+STEPS[idx+1][1]}</button></div>`}`;
+ callSide()}
+function callSide(){const mm=$('#cmemo');if(mm)mm.textContent=memoText();const el=$('#cside');if(!el)return;
+ const key=['who','gdpr','btype','app','ins'];
+ el.innerHTML=`<div class="card"><h3>Live notes</h3>${key.map(k=>{const f=NF.find(x=>x.k===k);return `<div class="fld"><div class="fl">${f.l}</div><div class="chips" data-f="${k}">${f.o.map(o=>{const v=Array.isArray(o)?o[0]:o;return `<button type="button" class="chip${N[k]===v?' on':''}" data-v="${esc(v)}">${esc(v)}</button>`}).join('')}</div></div>`}).join('')}
+ <div class="fld"><div class="fl">Paused / expectations</div><div class="chips"><button type="button" class="chip${N.pause==='Yes'?' on':''}" data-tg="pause">Recording paused</button><button type="button" class="chip${N.exp==='Yes'?' on':''}" data-tg="exp">Expectations managed</button></div></div>
+ <div class="fld"><div class="fl">Reason: <b>${esc(N.reasonSel==='NA'?'NA':N.reasonSel)}</b></div><div class="fl">Action taken</div><div class="chips">${ACTIONS.slice(0,8).map(a=>`<button type="button" class="chip na" data-a="${esc(a)}">${esc(a)}</button>`).join('')}</div>${N.action?`<p class="tip" style="margin:6px 0 0">${esc(N.action)}</p>`:''}</div>
+ <button class="btn" id="ccopy2" style="width:100%;justify-content:center">${ic('copy')}Copy memo</button></div>
+ <div class="card"><h3>Quality <span class="tip" id="cqn">${QC.filter((q,i)=>qcOn(i)).length}/${QC.length}</span></h3><div class="cq">${QC.map((q,i)=>`<label class="qci${qcOn(i)?' done':''}"><input type="checkbox" data-cq="${i}"${qcOn(i)?' checked':''}${qcAuto(i)?' disabled':''}><span>${esc(q[0])}</span></label>`).join('')}</div></div>`}
+function callGo(i,mark){const k=STEPS[callIdx()][0];if(mark==='done'){S.cs.done[k]=true;delete S.cs.skip[k]}else if(mark==='skip'){S.cs.skip[k]=true;delete S.cs.done[k]}
+ if(i>=STEPS.length){S.cfin=true}else{S.cfin=false;S.cstep=Math.max(0,i)}saveS();renderCall();$('#v-call').scrollTop=0;refreshNow(false)}
+function applyIntent(id){S.intent=S.intent===id?'':id;const it=S.intent&&INT(S.intent);if(it&&REASONS.includes(it.reason))N.reasonSel=it.reason;else if(!it)N.reasonSel='NA';saveS();saveN();renderCall();syncNotes();refreshNow(true)}
+function atClickShared(e,rerender){const t=e.target;
+ const tg=t.closest('[data-ptog]');if(tg){tg.closest('.proc').classList.toggle('open');return true}
+ const pm=t.closest('[data-pmemo]');if(pm){procMemo(pm.dataset.pmemo);return true}
+ return false}
+function atChangeShared(e){const c=e.target.closest('[data-pstep]');if(!c)return false;const [id,i]=c.dataset.pstep.split(':');procToggle(id,+i,c.checked);const art=c.closest('.proc');c.closest('li').classList.toggle('done',c.checked);const p=PID(id),st=procSteps(p);art.querySelector('.pc').textContent=st.filter((x,k)=>psOn(id,k)).length+'/'+st.length;return true}
+$('#w-call').addEventListener('click',e=>{const t=e.target;
+ let b;
+ if(atClickShared(e))return;
+ if(b=t.closest('[data-dir]')){S.dir=b.dataset.dir;if(S.dir==='out'){S.vwho=S.vwho==='ret'||S.vwho==='3p'?S.vwho:'cust'}else if(S.vwho==='3p')S.vwho='cust';S.vd={};saveS();renderCall();return}
+ if(b=t.closest('[data-vwho]')){S.vwho=b.dataset.vwho;S.vd={};saveS();renderCall();return}
+ if(b=t.closest('[data-vcol]')){S.vcol=b.dataset.vcol;S.vd={};saveS();renderCall();return}
+ if(b=t.closest('[data-vnl]')){S.vnl=b.dataset.vnl==='1';S.vd={};saveS();renderCall();return}
+ if(b=t.closest('[data-vpass]')){if(!b.disabled)verifySet(true);return}
+ if(t.closest('[data-vfail]')){verifySet(false);return}
+ if(b=t.closest('[data-pcur]')){S.pcur=b.dataset.pcur;saveS();renderCall();return}
+ if(t.closest('[data-allat]')){show('atcom');return}
+ if(b=t.closest('[data-alsom]')){$('#alsoBox').innerHTML=momCard(MID(b.dataset.alsom),{type:S.type,pre:'ca-',i:0,max:3});return}
+ if(t.closest('#ccopy3')){copyMemo();renderCall();return}
+ if(t.closest('.qcard .cp,.qcard .ls')){const q=t.closest('[data-qci]'),i=+q.dataset.qci;if(!qcAuto(i)&&!S.qc[i]){S.qc[i]=true;saveS();setTimeout(()=>{qcDraw();q.classList.add('done');const c=q.querySelector('[data-cq]');if(c)c.checked=true;const L=$('.qleft');if(L){const n=qLeft(STEPS[callIdx()][0]);L.textContent=qLeftTxt(n);L.classList.toggle('ok',!n)}},0)}}
+ if(b=t.closest('[data-cs]')){callGo(+b.dataset.cs);return}
+ if(t.closest('#cback')){callGo(callIdx()-1);return}
+ if(t.closest('#cskip')){callGo(callIdx()+1,'skip');return}
+ if(t.closest('#cdone')){callGo(callIdx()+1,'done');return}
+ if(b=t.closest('[data-int]')){applyIntent(b.dataset.int);return}
+ if(b=t.closest('[data-cty]')){setType(S.type===b.dataset.cty?'':b.dataset.cty);renderCall();return}
+ if(t.closest('#cnew')||t.closest('#cnew2')){newCall();return}
+ if(t.closest('#ccopy')||t.closest('#ccopy2')){copyMemo();callSide();return}
+ if(t.closest('#cscn')){let i;do{i=Math.floor(Math.random()*SCEN.length)}while(i===S.scn&&SCEN.length>1);S.scn=i;const s=SCEN[i];S.intent=s[5];if(REASONS.includes(INT(s[5]).reason))N.reasonSel=INT(s[5]).reason;S.type=s[6];saveS();saveN();setType(s[6]);renderCall();syncNotes();return}
+ if(t.closest('#cscx')){S.scn=-1;saveS();renderCall();return}
+ if(b=t.closest('[data-f] .chip')){const k=b.parentNode.dataset.f,v=b.dataset.v;N[k]=N[k]===v?'NA':v;syncNotes();return}
+ if(b=t.closest('[data-tg]')){const k=b.dataset.tg;N[k]=N[k]==='Yes'?'NA':'Yes';syncNotes();return}
+ if(b=t.closest('[data-a]')){const a=b.dataset.a;N.action=N.action.trim()?N.action.trim().replace(/[.;]$/,'')+'; '+a.toLowerCase():a;syncNotes();return}});
+$('#w-call').addEventListener('change',e=>{const el=e.target;
+ if(atChangeShared(e))return;
+ if(el.dataset.vk!==undefined){S.vd=S.vd||{};S.vd[el.dataset.vk]=el.checked;saveS();const li=el.closest('li');if(li)li.classList.toggle('done',el.checked);const bt=$('[data-vpass]');if(bt){const c=VCASES[vcase()],nl=S.dir!=='out'&&S.vnl,items=c.items.concat(nl?['auth','lname']:[]);bt.disabled=!items.every(k=>S.vd[k])}return}
+ if(el.dataset.cq!==undefined){S.qc[+el.dataset.cq]=el.checked;saveS();qcDraw();const q=el.closest('[data-qci]');if(q){q.classList.toggle('done',el.checked);const L=$('.qleft');if(L){const n=qLeft(STEPS[callIdx()][0]);L.textContent=qLeftTxt(n);L.classList.toggle('ok',!n)}}return}
+ if(el.dataset.rub!==undefined){S.rub[+el.dataset.rub]=el.checked;saveS()}});
+let nmT=0;$('#w-call').addEventListener('input',e=>{if(e.target.id==='cname'){S.agent=e.target.value.trim();saveS();clearTimeout(nmT);nmT=setTimeout(()=>{const m=$('#cmain');if(m&&!S.cfin){const idx=callIdx();m.innerHTML=callBody(false,idx,STEPS[idx],S.intent?INT(S.intent):null,0,0);}refreshNow(true)},350)}});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-more]');if(!b)return;const art=b.closest('article.mom');if(!art)return;const id=b.dataset.more,m=MID(id);if(!m)return;const pre=art.id.slice(0,art.id.length-id.length);const tmp=document.createElement('div');tmp.innerHTML=momCard(m,{type:S.type,pre,i:0,max:99});const n=tmp.firstChild;n.classList.remove('rise');art.replaceWith(n)});
+
 /* ================= INIT ================= */
-renderHome();renderCust();renderSit();renderUK();renderRapport();renderFlights();renderNotes();renderDest();renderFav();renderDock();
+MOM.forEach(m=>m.w.forEach(w=>{if(typeof w.f==='string')w.f=w.f.split(',').filter(Boolean);else if(!w.f)w.f=[]}));buildIdx();renderHome();renderCust();renderAtcom();renderCall();renderSit();renderUK();renderRapport();renderFlights();renderNotes();renderDest();renderFav();renderDock();
 setType(S.type);setDest(S.dest);qcDraw();setAutoUI();autoStart();
-const startView=S.view&&$('#v-'+S.view)&&!['type'].includes(S.view)?S.view:'home';
+const startView=S.view&&$('#v-'+S.view)&&!['type'].includes(S.view)?S.view:'call';
 show(startView);
 sheetPull();setInterval(sheetPull,60000);setInterval(remTick,1000);
 window.__tui={search,estH,P,memoText,S:()=>S,N:()=>N,REM:()=>REM,addRem,stageAuto,show,MOM,TYPES,QC,qcOn,tsNext,stCycle,qcVisible,goMoment};
